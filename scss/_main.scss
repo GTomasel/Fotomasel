@@ -1,0 +1,304 @@
+@mixin flexCenter {
+	display: flex;
+	align-items: center;	
+}
+@mixin VideoWide($x){
+	width: $x;
+	height: ($x*9)/16;
+}
+
+body{ 
+	font-family: $fuenteMain;
+	font-weight: 300;
+  	display:flex;
+  	flex-direction:column; 
+  	height:100vh; 
+}
+.estiloTitulos{
+	margin-bottom: 1.5rem;
+	font-size: 1.5rem;
+}
+
+/*Header*/
+nav{
+	background: $gradienteFondo; 
+	.navbar__logo{
+		height: 6vh;
+		min-height: 40px;
+		margin: .3rem -.5rem 0 0;
+	}
+	a{
+		font-size: 1.15rem;
+		font-weight: 200;
+	}
+	.navbar-toggler {
+		font-size: 1.5rem;
+	}
+}
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link {
+	color: $colorRed;
+}
+
+/*Main*/
+.main__fondoTop{
+	background-image: url("../media/fondo1.jpg");
+	background-position: center;
+	background-size: cover;
+	margin-bottom: 2rem;
+	height: 100vh;
+}
+.main__flechaVolver{
+	position: fixed;
+	height: 4vh;
+	right: 0.6rem;
+	bottom: 35px;
+	z-index: 11;
+	transition: .2s ease;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+/*Slideshows y bio*/
+.flexSlideshow{
+	display: flex;
+	margin: 0.5rem;
+  	padding: 1rem 0.5rem 0.5rem 0.5rem;
+  	font-size: 1.1rem;
+  	flex-flow: wrap;
+  	justify-content: space-evenly;
+    img{
+        width: 100vw;
+    }
+}
+.carousel{
+	margin-bottom: 1.25rem;
+}
+.carousel-caption{
+	width: 100%;
+	right: 0%;
+	left: 0%;
+	bottom: 0px;
+	padding-top: 35px;
+ 	background: $gradienteCarousel;
+    h5{
+        font-size: 1.25rem;
+        font-weight: 300;
+        color: $colorTiza;
+        line-height: 0;
+    }
+}
+.estiloParrafos{
+	color: $colorTiza;
+	background: $colorDark;
+	background: $gradienteFondo; 
+	padding: 2rem 2rem 2rem 2rem;
+	font-size: 1.1rem;
+	h2, h1{
+		font-weight: 200;
+		font-size: 1.1rem;
+	}
+}
+.estiloParrafos__redes{
+	@include flexCenter;
+	margin-top: 2rem;
+  	padding: 0rem;
+  	flex-flow: wrap;
+  	justify-content: space-evenly;
+}
+.estiloParrafos--margen{
+	margin: 2rem 0 4rem;
+}
+.iconoLink{
+	img{
+		height: 40px;
+		justify-self: end;
+		transition: transform .3s ease;
+	}
+}
+.iconoLink--animacion{
+	img{
+		&:hover{
+			transform: scale(1.2);
+		}
+	}
+}
+
+/*Videos*/
+.youtube{
+	@include flexCenter;
+	flex-flow: column;
+	position: relative;
+    iframe{
+		@include VideoWide(90vw);
+    }
+    div{
+        margin-bottom: 2rem;
+        font-size: 0;
+    }
+} 
+
+/*Footer*/
+footer{
+	display: grid;
+	grid-template-columns: 3rem auto auto;
+	align-items: center;
+	justify-items: stretch;
+	background: $colorDark;
+	margin-top:auto;
+    .footer__MediosPago{
+		justify-self: end;
+        width: 25vw;
+		max-height: 50px;
+        padding: 0.15rem 1.5rem 0.15rem 0.5rem;
+    }
+    h5{
+		font-weight: 200;
+        text-align: left;
+        font-size: 1rem;
+        color: $colorTiza;
+		margin: .25rem .25rem .25rem 0rem;
+  	}
+	.fa-map-marker-alt{
+		color: $colorRed;
+		margin-left: 1.25rem;
+	}
+}
+
+/*Contacto*/
+.flexContactoMain{
+	@include flexCenter;
+	flex-direction: column;
+  	justify-content: space-around;
+  	margin-top: 15vh;
+	form{
+		padding: 4vw;
+		margin-bottom: 2vh;
+		position: relative;
+	} 
+    p{
+        font-weight:600;
+        font-size: 1.25rem;
+		padding-bottom: 1rem;
+    }
+	#maps{
+		width: 88vw;
+		height: 44vh;
+		margin-bottom: 2vh;
+		border: 2px solid $colorGris;
+	}
+} 
+
+/*Presupuestos*/
+.flexPresu{
+	@include flexCenter;
+	flex-direction: column-reverse;
+  	justify-content: space-around;
+  	margin-top: 15vh;
+	.flexPresu__foto img{
+		height: 80vw;
+		margin-bottom: 5vw;
+	}
+	.flexPresu__titulo{
+		font-size: 1rem;
+		display: block;
+		padding-bottom: 1rem;
+	}
+}
+
+@media (min-width: 576px){
+	.main__flechaVolver{
+		height: 6vh;
+		right: 0.6rem;
+		bottom: 35px;
+	}
+	.carousel-caption{
+		h5{
+		font-size: 1.5rem;
+		font-weight: 300;
+		line-height: 1;
+		color: $colorTiza;
+		}
+	}
+	.flexSlideshow {
+        img{
+		width: 45vw;
+	    }
+        .fa-lg{
+            font-size: 2em;
+        }
+    } 
+	footer{
+	    grid-template-columns: 3rem auto auto;
+        .footer__MediosPago{
+            width: 12vw;
+            padding: 0.15rem 1rem 0.15rem 0.5rem;
+        }
+        h5{
+            font-size: 1rem;
+			margin: .25rem;
+        }
+	}
+}
+
+@media (min-width: 992px){
+	nav{
+		.navbar__logo{
+			height: 4vw;
+			min-height: 40px;
+		}
+		a{
+			font-size: 1.5rem;
+			margin: 0 .25rem 0 .25rem;
+			transition: color 0.3s ease;
+			&:hover{
+				color: $colorRed;
+			}
+		}
+		#links{
+			justify-content: space-evenly;
+		}
+	}
+
+	.customWidth{
+		width: 45vw;
+        source{
+            width: 45vw;
+        }
+	} 
+	.youtube{
+		flex-flow: row;
+		justify-content: space-evenly;
+		margin-top: 2rem;
+        iframe{
+			@include VideoWide(45vw)
+        }
+        div{
+            margin: 1.5rem 0 3rem 0;
+        }
+	} 
+	footer{
+		.footer__MediosPago{
+		width: 6.5vw;
+		}	
+	}
+	.flexContactoMain{
+	flex-flow: row;
+		form{
+			width: 45vw;
+			height: 36vw;
+			padding: 2vw;
+		}
+		#maps{
+			width: 40vw;
+			height: 40vw;
+		}
+	}	 	
+	.flexPresu{
+		flex-flow: row;
+		.flexPresu__foto img{
+			height: 35vw;
+			margin-bottom: 1vw;
+		}
+	}
+}
