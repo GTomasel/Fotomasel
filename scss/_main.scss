@@ -13,6 +13,9 @@ body{
   	display:flex;
   	flex-direction:column; 
   	height:100vh; 
+	background-color: #f0f0f0;
+	background-image: url("../media/body.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 .estiloTitulos{
 	margin-bottom: 1.5rem;
@@ -23,9 +26,9 @@ body{
 nav{
 	background: $gradienteFondo; 
 	.navbar__logo{
-		height: 6vh;
+		height: 7vh;
 		min-height: 40px;
-		margin: .3rem -.5rem 0 0;
+		margin: .3rem -.5rem 0 1rem;
 	}
 	a{
 		font-size: 1.15rem;
@@ -49,9 +52,10 @@ nav{
 }
 .main__flechaVolver{
 	position: fixed;
-	height: 4vh;
+	font-size: 2em;
+	color: #5e5e5e;
 	right: 0.6rem;
-	bottom: 35px;
+	bottom: 70px;
 	z-index: 11;
 	transition: .2s ease;
     &:hover{
@@ -92,11 +96,12 @@ nav{
 	color: $colorTiza;
 	background: $colorDark;
 	background: $gradienteFondo; 
-	padding: 2rem 2rem 2rem 2rem;
+	padding: 2rem;
+	margin-bottom:3rem;
 	font-size: 1.1rem;
 	h2, h1{
 		font-weight: 200;
-		font-size: 1.1rem;
+		font-size: 1rem;
 	}
 }
 .estiloParrafos__redes{
@@ -106,18 +111,16 @@ nav{
   	flex-flow: wrap;
   	justify-content: space-evenly;
 }
-.estiloParrafos--margen{
-	margin: 2rem 0 4rem;
-}
 .iconoLink{
-	img{
-		height: 40px;
+	i{
+		font-size: 2.5em;
+		color: $colorTiza;
 		justify-self: end;
-		transition: transform .3s ease;
+		transition: transform .2s ease;
 	}
 }
 .iconoLink--animacion{
-	img{
+	i{
 		&:hover{
 			transform: scale(1.2);
 		}
@@ -144,11 +147,12 @@ footer{
 	grid-template-columns: 3rem auto auto;
 	align-items: center;
 	justify-items: stretch;
-	background: $colorDark;
+	background: $gradienteFondo;
 	margin-top:auto;
+	padding: 2rem 0;
     .footer__MediosPago{
 		justify-self: end;
-        width: 25vw;
+        height: 40px;
 		max-height: 50px;
         padding: 0.15rem 1.5rem 0.15rem 0.5rem;
     }
@@ -187,11 +191,17 @@ footer{
 		margin-bottom: 2vh;
 		border: 2px solid $colorGris;
 	}
+	.btn-dark{
+		background: $gradienteFondo;
+	}
+	.btn-danger{
+		background: $colorRedLogo;
+	}
 } 
 
 /*Presupuestos*/
 .flexPresu{
-	@include flexCenter;
+	display: flex;
 	flex-direction: column-reverse;
   	justify-content: space-around;
   	margin-top: 15vh;
@@ -204,11 +214,14 @@ footer{
 		display: block;
 		padding-bottom: 1rem;
 	}
+	.table .thead-dark th{
+		background: $gradienteFondo;
+	}
 }
 
 @media (min-width: 576px){
 	.main__flechaVolver{
-		height: 6vh;
+		font-size: 3em;
 		right: 0.6rem;
 		bottom: 35px;
 	}
@@ -225,18 +238,29 @@ footer{
 		width: 45vw;
 	    }
         .fa-lg{
-            font-size: 2em;
+            font-size: 1.5em;
         }
     } 
+	.estiloParrafos{
+		h2, h1{
+			font-size: 1.1rem;
+		}
+	}
 	footer{
-	    grid-template-columns: 3rem auto auto;
+	    grid-template-columns: 3rem auto 15rem;
         .footer__MediosPago{
-            width: 12vw;
-            padding: 0.15rem 1rem 0.15rem 0.5rem;
+			width: 28vw;
+			height: auto;
+            padding: 0.15rem 5rem 0.15rem 0.5rem;
         }
+		.fa-map-marker-alt{
+			padding-left: 4rem;
+			font-size: 1.9em;
+		}
         h5{
-            font-size: 1rem;
-			margin: .25rem;
+            font-size: 1.25rem;
+			margin: .5rem;
+			padding-left: 4rem;
         }
 	}
 }
@@ -244,8 +268,9 @@ footer{
 @media (min-width: 992px){
 	nav{
 		.navbar__logo{
-			height: 4vw;
+			height: 4.5vw;
 			min-height: 40px;
+			margin: .4rem -.5rem 0 2rem;
 		}
 		a{
 			font-size: 1.5rem;
@@ -259,7 +284,11 @@ footer{
 			justify-content: space-evenly;
 		}
 	}
-
+	.iconoLink{
+		i{
+			font-size: 3em;
+		}
+	}
 	.customWidth{
 		width: 45vw;
         source{
@@ -279,11 +308,12 @@ footer{
 	} 
 	footer{
 		.footer__MediosPago{
-		width: 6.5vw;
+		width: 15vw;
 		}	
 	}
 	.flexContactoMain{
 	flex-flow: row;
+	align-items: flex-start;
 		form{
 			width: 45vw;
 			height: 36vw;
@@ -298,7 +328,8 @@ footer{
 		flex-flow: row;
 		.flexPresu__foto img{
 			height: 35vw;
-			margin-bottom: 1vw;
+			margin-bottom: .5vw;
+			margin-left: 3rem;
 		}
 	}
 }
