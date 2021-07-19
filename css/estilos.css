@@ -48,12 +48,13 @@ nav .navbar-toggler {
 }
 
 /*Main*/
-.main__fondoTop {
-  background-image: url("../media/fondo1.jpg");
-  background-position: center;
-  background-size: cover;
-  margin-bottom: 2rem;
+.main__fondo {
+  /*margin-bottom: 2rem;*/
+  width: 100%;
   height: 100vh;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .main__flechaVolver {
@@ -61,8 +62,8 @@ nav .navbar-toggler {
   font-size: 2em;
   color: #5e5e5e;
   right: 0.6rem;
-  bottom: 70px;
-  z-index: 11;
+  bottom: 75px;
+  z-index: 20;
   -webkit-transition: .2s ease;
   transition: .2s ease;
 }
@@ -78,7 +79,7 @@ nav .navbar-toggler {
   display: -ms-flexbox;
   display: flex;
   margin: 0.5rem;
-  padding: 1rem 0.5rem 0.5rem 0.5rem;
+  padding: 1rem 0.5rem 2rem 0.5rem;
   font-size: 1.1rem;
   -ms-flex-flow: wrap;
       flex-flow: wrap;
@@ -118,13 +119,23 @@ nav .navbar-toggler {
   background: -webkit-gradient(linear, left top, left bottom, from(#121212), color-stop(50%, rgba(18, 18, 18, 0.913119)), to(rgba(18, 18, 18, 0.946732)));
   background: linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.913119) 50%, rgba(18, 18, 18, 0.946732) 100%);
   padding: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   font-size: 1.1rem;
 }
 
 .estiloParrafos h2, .estiloParrafos h1 {
   font-weight: 200;
   font-size: 1rem;
+}
+
+.estiloParrafos-opaco {
+  background: -webkit-gradient(linear, left top, left bottom, from(#121212), color-stop(50%, #1d1d1d), to(#121212));
+  background: linear-gradient(180deg, #121212 0%, #1d1d1d 50%, #121212 100%);
+  z-index: 100;
+}
+
+.estiloParrafos-margen {
+  margin: -14rem 0 20rem;
 }
 
 .estiloParrafos__redes {
@@ -194,8 +205,8 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   justify-items: stretch;
-  background: -webkit-gradient(linear, left top, left bottom, from(#121212), color-stop(50%, rgba(18, 18, 18, 0.913119)), to(rgba(18, 18, 18, 0.946732)));
-  background: linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.913119) 50%, rgba(18, 18, 18, 0.946732) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#121212), color-stop(50%, #1d1d1d), to(#121212));
+  background: linear-gradient(180deg, #121212 0%, #1d1d1d 50%, #121212 100%);
   margin-top: auto;
   padding: 2rem 0;
 }
@@ -258,8 +269,8 @@ footer .fa-map-marker-alt {
 }
 
 .flexContactoMain .btn-dark {
-  background: -webkit-gradient(linear, left top, left bottom, from(#121212), color-stop(50%, rgba(18, 18, 18, 0.913119)), to(rgba(18, 18, 18, 0.946732)));
-  background: linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.913119) 50%, rgba(18, 18, 18, 0.946732) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#121212), color-stop(50%, #1d1d1d), to(#121212));
+  background: linear-gradient(180deg, #121212 0%, #1d1d1d 50%, #121212 100%);
 }
 
 .flexContactoMain .btn-danger {
@@ -292,8 +303,8 @@ footer .fa-map-marker-alt {
 }
 
 .flexPresu .table .thead-dark th {
-  background: -webkit-gradient(linear, left top, left bottom, from(#121212), color-stop(50%, rgba(18, 18, 18, 0.913119)), to(rgba(18, 18, 18, 0.946732)));
-  background: linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.913119) 50%, rgba(18, 18, 18, 0.946732) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#121212), color-stop(50%, #1d1d1d), to(#121212));
+  background: linear-gradient(180deg, #121212 0%, #1d1d1d 50%, #121212 100%);
 }
 
 @media (min-width: 576px) {
@@ -339,7 +350,7 @@ footer .fa-map-marker-alt {
 
 @media (min-width: 992px) {
   nav .navbar__logo {
-    height: 4.5vw;
+    height: 4.25rem;
     min-height: 40px;
     margin: .4rem -.5rem 0 2rem;
   }
@@ -357,8 +368,15 @@ footer .fa-map-marker-alt {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .main__fondo-contain {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
   .iconoLink i {
     font-size: 3em;
+  }
+  .estiloParrafos-margen {
+    margin: -11rem 0 18rem;
   }
   .customWidth {
     width: 45vw;

@@ -4,7 +4,8 @@ $colorRedLogo: #e22634;
 $colorTiza: #e3e3e3;
 $colorGris: #6a6a6a;
 $colorDark: rgb(18,18,18);
-$gradienteFondo: linear-gradient(180deg, rgba(18,18,18,1) 0%, rgba(18,18,18,0.9131185921634278) 50%, rgba(18,18,18,0.9467320375415791) 100%); 
+$gradienteFondo: linear-gradient(180deg, #121212 0%, rgb(29, 29, 29) 50%, rgb(18, 18, 18) 100%);
+$gradienteTransparencia: linear-gradient(180deg, rgba(18,18,18,1) 0%, rgba(18,18,18,0.9131185921634278) 50%, rgba(18,18,18,0.9467320375415791) 100%); 
 $gradienteCarousel: linear-gradient(0deg, rgb(17, 17, 17) 6%, rgba(24,24,24,0) 100%);
 
 /*Fuentes*/
