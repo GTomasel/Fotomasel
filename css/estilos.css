@@ -14,12 +14,15 @@ body {
   height: 100vh;
   background-color: #f0f0f0;
   background-image: url("../media/body.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .estiloTitulos {
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
+}
+
+.rojo {
+  color: #ff1c2b;
 }
 
 /*Header*/
@@ -49,7 +52,6 @@ nav .navbar-toggler {
 
 /*Main*/
 .main__fondo {
-  /*margin-bottom: 2rem;*/
   width: 100%;
   height: 100vh;
   display: block;
@@ -62,7 +64,7 @@ nav .navbar-toggler {
   font-size: 2em;
   color: #5e5e5e;
   right: 0.6rem;
-  bottom: 75px;
+  bottom: 70px;
   z-index: 20;
   -webkit-transition: .2s ease;
   transition: .2s ease;
@@ -172,27 +174,22 @@ nav .navbar-toggler {
 
 /*Videos*/
 .youtube {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  position: relative;
+  margin: auto;
+  width: 100vw;
 }
 
-.youtube iframe {
-  width: 90vw;
-  height: 50.625vw;
+.youtube img {
+  width: 100vw;
+  height: 56.25vw;
 }
 
-.youtube div {
-  margin-bottom: 2rem;
-  font-size: 0;
+.slick-prev:before, .slick-next:before {
+  color: #121212;
+}
+
+.slick-dots li.slick-active button::before {
+  color: #ff1c2b;
+  opacity: 1;
 }
 
 /*Footer*/
@@ -207,8 +204,8 @@ footer {
   justify-items: stretch;
   background: -webkit-gradient(linear, left top, left bottom, from(#121212), color-stop(50%, #1d1d1d), to(#121212));
   background: linear-gradient(180deg, #121212 0%, #1d1d1d 50%, #121212 100%);
-  margin-top: auto;
-  padding: 2rem 0;
+  margin-top: 2rem;
+  padding: 1.75rem 0;
 }
 
 footer .footer__MediosPago {
@@ -310,7 +307,7 @@ footer .fa-map-marker-alt {
 @media (min-width: 576px) {
   .main__flechaVolver {
     font-size: 3em;
-    right: 0.6rem;
+    right: .6rem;
     bottom: 35px;
   }
   .carousel-caption h5 {
@@ -327,6 +324,10 @@ footer .fa-map-marker-alt {
   }
   .estiloParrafos h2, .estiloParrafos h1 {
     font-size: 1.1rem;
+  }
+  .slick-dots li button::before {
+    font-size: 8px;
+    top: 8px;
   }
   footer {
     -ms-grid-columns: 3rem auto 15rem;
@@ -385,21 +386,11 @@ footer .fa-map-marker-alt {
     width: 45vw;
   }
   .youtube {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    margin-top: 2rem;
+    width: 85vw;
   }
-  .youtube iframe {
-    width: 45vw;
-    height: 25.3125vw;
-  }
-  .youtube div {
-    margin: 1.5rem 0 3rem 0;
+  .youtube img {
+    width: 60vw;
+    height: 33.75vw;
   }
   footer .footer__MediosPago {
     width: 15vw;
@@ -432,6 +423,255 @@ footer .fa-map-marker-alt {
     height: 35vw;
     margin-bottom: .5vw;
     margin-left: 3rem;
+  }
+}
+
+#section-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding-bottom: 5rem;
+}
+
+#section-1 .content-slider {
+  width: 100%;
+  height: 100%;
+  width: 100vw;
+  height: 56.25vw;
+}
+
+#section-1 .content-slider img {
+  width: 100vw;
+  height: 56.25vw;
+}
+
+#section-1 .content-slider input {
+  display: none;
+}
+
+#section-1 .content-slider .slider {
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+}
+
+#section-1 .content-slider .slider .banner {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#section-1 .content-slider #navVideo {
+  width: 100%;
+  margin-top: 1rem;
+  z-index: 10;
+  text-align: center;
+}
+
+#section-1 .content-slider #navVideo .controls {
+  display: block;
+  color: #121212;
+}
+
+#section-1 .content-slider #navVideo .controls .videoLabel {
+  font-size: .75rem;
+  display: block;
+  text-align: center;
+  font-weight: 400;
+}
+
+#section-1 .content-slider #navVideo .controls label {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  height: 3.1em;
+  overflow: hidden;
+  margin: 0 .3em;
+  padding-top: .5em;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: .9em;
+  color: #121212;
+  font-weight: 200;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#section-1 .content-slider #navVideo .controls label .progressbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: #121212;
+  z-index: 100;
+}
+
+#section-1 .content-slider #navVideo .controls label .progressbar .progressbar-fill {
+  position: inherit;
+  width: inherit;
+  height: inherit;
+  margin-left: -100%;
+  background: #ff1c2b;
+}
+
+#section-1 .content-slider #navVideo .controls label span {
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+#section-1 .content-slider #navVideo .controls labelhover {
+  color: #ff1c2b;
+}
+
+#section-1 .content-slider #banner1:checked ~ .slider #top-banner-1 {
+  opacity: 1;
+  z-index: 1;
+}
+
+#section-1 .content-slider #banner1:checked ~ #navVideo label:nth-of-type(1) {
+  cursor: default;
+  color: #ff1c2b;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#section-1 .content-slider #banner1:checked ~ #navVideo label:nth-of-type(1) .progressbar {
+  background: #121212;
+}
+
+#section-1 .content-slider #banner1:checked ~ #navVideo label:nth-of-type(1) .progressbar-fill {
+  -webkit-animation: progressBarFill 5s linear;
+          animation: progressBarFill 5s linear;
+}
+
+#section-1 .content-slider #banner2:checked ~ .slider #top-banner-2 {
+  opacity: 1;
+  z-index: 1;
+}
+
+#section-1 .content-slider #banner2:checked ~ #navVideo label:nth-of-type(2) {
+  cursor: default;
+  color: #ff1c2b;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#section-1 .content-slider #banner2:checked ~ #navVideo label:nth-of-type(2) .progressbar {
+  background: #121212;
+}
+
+#section-1 .content-slider #banner2:checked ~ #navVideo label:nth-of-type(2) .progressbar-fill {
+  -webkit-animation: progressBarFill 5s linear;
+          animation: progressBarFill 5s linear;
+}
+
+#section-1 .content-slider #banner3:checked ~ .slider #top-banner-3 {
+  opacity: 1;
+  z-index: 1;
+}
+
+#section-1 .content-slider #banner3:checked ~ #navVideo label:nth-of-type(3) {
+  cursor: default;
+  color: #ff1c2b;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#section-1 .content-slider #banner3:checked ~ #navVideo label:nth-of-type(3) .progressbar {
+  background: #121212;
+}
+
+#section-1 .content-slider #banner3:checked ~ #navVideo label:nth-of-type(3) .progressbar-fill {
+  -webkit-animation: progressBarFill 5s linear;
+          animation: progressBarFill 5s linear;
+}
+
+#section-1 .content-slider #banner4:checked ~ .slider #top-banner-4 {
+  opacity: 1;
+  z-index: 1;
+}
+
+#section-1 .content-slider #banner4:checked ~ #navVideo label:nth-of-type(4) {
+  cursor: default;
+  color: #ff1c2b;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#section-1 .content-slider #banner4:checked ~ #navVideo label:nth-of-type(4) .progressbar {
+  background: #121212;
+}
+
+#section-1 .content-slider #banner4:checked ~ #navVideo label:nth-of-type(4) .progressbar-fill {
+  -webkit-animation: progressBarFill 5s linear;
+          animation: progressBarFill 5s linear;
+}
+
+@-webkit-keyframes progressBarFill {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes progressBarFill {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  #section-1 {
+    padding-bottom: 5rem;
+  }
+  #section-1 .content-slider {
+    width: 50vw;
+    height: 28.125vw;
+  }
+  #section-1 .content-slider img {
+    width: 50vw;
+    height: 28.125vw;
+  }
+  #navVideo {
+    margin-top: 1rem;
+  }
+  #navVideo .controls .videoLabel {
+    font-size: .75rem;
+    display: block;
+    text-align: center;
+    font-weight: 400;
+  }
+  #navVideo .controls label {
+    width: 20%;
+    height: 3.1em;
+    margin: 0 1em;
+    padding-top: 1em;
+    font-size: .9em;
+    font-weight: 200;
+  }
+  #navVideo .controls label span {
+    font-size: 1.4em;
+    font-weight: 700;
   }
 }
 /*# sourceMappingURL=estilos.css.map */

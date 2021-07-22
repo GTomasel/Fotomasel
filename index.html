@@ -6,24 +6,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Esta es mi pagina web personal como fotógrafo profesional en la ciudad de Buenos Aires y alrededores, acá se pueden ver fotos de mis trabajos e información de mis servicios.">
 	<meta name="keywords"  content="FOTOGRAFO, FOTOGRAFIA, VIDEO, SERVICIO, BUENOS AIRES, BAUTISMO, FIESTA, CUMPLEAÑOS">
-	<script src="https://kit.fontawesome.com/026c5ee3ed.js" crossorigin="anonymous"></script>
 	<script src="js/jquery.min.js"></script>
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="js/bootstrap.bundle.min.js"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+	<link rel="stylesheet" href="css/lity.css">
+	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+	<link rel="stylesheet" href="css/estilos.css" type="text/css">
 </head>
-<body>
-	<header>	
-		<nav class="navbar navbar-expand-lg navbar-dark fixed-top flex-row">
+<body data-spy="scroll" data-target="#navbar" data-offset="300">
+	<header id="header">	
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top flex-row" id="navbar">
 			<a class="navbar-brand" href="index.html"><img class="navbar__logo mr-lg-3" src="media/logo3.png" title="logo" alt="logo"></a>
 			<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 			  <span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 			  <div id="links" class="navbar-nav align-items-center mt-2 my-2 mx-auto w-100">
-				<a class="nav-link active" href="index.html">INICIO <span class="sr-only">(current)</span></a>
-				<a class="nav-link" href="index.html#fotos">FOTOS</a>
-				<a class="nav-link" href="index.html#video">VIDEO</a>
+				<a class="nav-link active" href="#header">INICIO <span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="#fotos">FOTOS</a>
+				<a class="nav-link" href="#video">VIDEO</a>
 				<a class="nav-link" href="presupuestos.html">PRESUPUESTOS</a>
 				<a class="nav-link" href="contacto.html">CONTACTO</a>
 			  </div>
@@ -42,7 +45,7 @@
 		</script>
 	</div>
 	<div class="estiloParrafos estiloParrafos-opaco text-center rellax" data-rellax-speed="-1">
-		<p class="estiloTitulos">Servicios de fotografía</p>
+		<p class="estiloTitulos"><span class="rojo">S</span>ervicios de fotografía</p>
 		<h1 id="fotos">
 			Acá pueden ver una selección de imágenes de mis trabajos, incluyendo bautismos, retratos, cumpleaños, fiestas y bandas en vivo para las cuales también hago filmación de sus shows.
 		</h1>		
@@ -355,7 +358,7 @@
 			</div>
 		</div>
 		<div class="text-center estiloParrafos estiloParrafos-margen rellax" data-rellax-speed="-1"><!--Pequeña biografía-->
-			<p class="estiloTitulos">Sobre mí</p>
+			<p class="estiloTitulos"><span class="rojo">S</span>obre mí</p>
 			<div class="row">
 				<h2 class="col-lg ml-lg-5 mr-lg-3 ml-md-4 mr-md-4">
 					Me llamo Gabriel Tomasel, comencé con la fotografía aprendiendo de forma autodidacta en 2011, previamente ya experimentaba con cámaras compactas que habia en la familia o incluso los primeros celulares y ahí fué donde descubrí este mundo fascinante sacando fotos a todo lo que se me cruzaba por delante, teniendo que ser creativo ante las limitaciones de no tener una cámara "profesional".
@@ -374,31 +377,28 @@
 		</div>
 	</div><!--End Slideshows, texto y bio-->
 	<div><!--Video de muestra-->
-		<p id="video" class="text-center estiloTitulos">Video clips</p>
-		<div class="youtube overflow-hidden">
-			<div data-aos="fade-down" class="border border-secondary rounded">
-				<iframe id="video1" width="560" height="315" src="https://www.youtube.com/embed/TUzmEr6qzWU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-				</iframe>
-			</div>
-			<div data-aos="fade-down" class="border border-secondary rounded">
-				<iframe id="video1" width="560" height="315" src="https://www.youtube.com/embed/YM5CtD6F-gY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-				</iframe>
-			</div>
+		<p id="video" class="text-center estiloTitulos"><span class="rojo">V</span>ideo clips</p>
+		<div class="youtube border border-secondary" data-aos="fade-up">
+			<div><a href="https://youtu.be/TUzmEr6qzWU" data-lity><img src="media/marca.jpg" alt="fondo"></a></div>
+			<div><a href="https://youtu.be/YM5CtD6F-gY" data-lity><img src="media/nadie.jpg" alt="fondo"></a></div>
+			<div><a href="https://youtu.be/Bz3aZaags3s" data-lity><img src="media/volvere.jpg" alt="fondo"></a></div>
+			<div><a href="https://youtu.be/0l_x3ekf1oU" data-lity><img src="media/vasaver.jpg" alt="fondo"></a></div>
 		</div>
 	</div><!--End Video de muestra-->
 	<footer>
 		<i class="fas fa-map-marker-alt fa-lg"></i>
-		<h5>Buenos Aires, Argentina - © 2021</h5>
+		<h5>Buenos Aires, Argentina - <span class="rojo">© 2021</span></h5>
 		<img class="footer__MediosPago" src="media/mp.png" alt="Mercado Pago">
 	</footer>
-	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="https://kit.fontawesome.com/026c5ee3ed.js" crossorigin="anonymous"></script>
 	<script src="js/rellax.min.js"></script>
-	<script>
-	  var rellax = new Rellax('.rellax');
-	</script>
+	<script src="js/lity.js"></script>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script type="text/javascript" src="js/slick_custom.js"></script>
 	<script>
+		var rellax = new Rellax('.rellax');
 	  AOS.init();
-	</script>
+  </script>
 </body>
 </html>

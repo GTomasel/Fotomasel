@@ -15,11 +15,13 @@ body{
   	height:100vh; 
 	background-color: #f0f0f0;
 	background-image: url("../media/body.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 .estiloTitulos{
 	margin-bottom: 1.5rem;
 	font-size: 1.5rem;
+}
+.rojo{
+	color: $colorRed;
 }
 
 /*Header*/
@@ -44,7 +46,6 @@ nav{
 
 /*Main*/
 .main__fondo{
-	/*margin-bottom: 2rem;*/
 	width: 100%;
 	height: 100vh;
 	display: block;
@@ -55,7 +56,7 @@ nav{
 	font-size: 2em;
 	color: #5e5e5e;
 	right: 0.6rem;
-	bottom: 75px;
+	bottom: 70px;
 	z-index: 20;
 	transition: .2s ease;
     &:hover{
@@ -135,18 +136,19 @@ nav{
 
 /*Videos*/
 .youtube{
-	@include flexCenter;
-	flex-flow: column;
-	position: relative;
-    iframe{
-		@include VideoWide(90vw);
-    }
-    div{
-        margin-bottom: 2rem;
-        font-size: 0;
-    }
-} 
-
+	margin: auto;
+	width: 100vw;
+	img{
+		@include VideoWide(100vw);
+	}
+}
+.slick-prev:before, .slick-next:before { 
+    color: $colorDark;
+}
+.slick-dots li.slick-active button::before{
+	color: $colorRed;
+	opacity: 1;
+}
 /*Footer*/
 footer{
 	display: grid;
@@ -154,8 +156,8 @@ footer{
 	align-items: center;
 	justify-items: stretch;
 	background: $gradienteFondo;
-	margin-top:auto;
-	padding: 2rem 0;
+	margin-top: 2rem;
+	padding: 1.75rem 0;
     .footer__MediosPago{
 		justify-self: end;
         height: 40px;
@@ -228,7 +230,7 @@ footer{
 @media (min-width: 576px){
 	.main__flechaVolver{
 		font-size: 3em;
-		right: 0.6rem;
+		right: .6rem;
 		bottom: 35px;
 	}
 	.carousel-caption{
@@ -251,6 +253,10 @@ footer{
 		h2, h1{
 			font-size: 1.1rem;
 		}
+	}
+	.slick-dots li button::before{
+		font-size: 8px;
+		top: 8px;
 	}
 	footer{
 	    grid-template-columns: 3rem auto 15rem;
@@ -308,16 +314,11 @@ footer{
         }
 	} 
 	.youtube{
-		flex-flow: row;
-		justify-content: space-evenly;
-		margin-top: 2rem;
-        iframe{
-			@include VideoWide(45vw)
-        }
-        div{
-            margin: 1.5rem 0 3rem 0;
-        }
-	} 
+		width: 85vw;
+		img{
+			@include VideoWide(60vw);
+		}
+	}
 	footer{
 		.footer__MediosPago{
 		width: 15vw;

@@ -28,25 +28,21 @@
 		</nav>
 	</header><!--End Header-->	
 	<div class="flexContactoMain"><!--Main-->
-		<form>
-			<p>CONTACTO</p>
+		<form action="https://formspree.io/f/mleawaad" id="my-form" method="POST">
+			<p><span class="rojo">C</span>ONTACTO</p>
 			<div class="form-group">
-		   		<label for="exampleInputName1">Nombre y Apellido</label>
-		    	<input type="text" class="form-control" id="InputName1">
+		   		<label for="firstName">Nombre y Apellido</label>
+		    	<input type="text" class="form-control" id="firstName" name="firstName" required>
 		  	</div>
 		  	<div class="form-group">
-		    	<label for="exampleInputEmail1">Direccion de E-mail</label>
-		    	<input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
+		    	<label for="email">Direccion de E-mail</label>
+		    	<input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
 		    	<small id="emailHelp" class="form-text text-muted">Nunca compartiremos tus datos personales con nadie más.</small>
 		  	</div>	  	
 		  	<div class="form-group">
-    			<label for="exampleFormControlTextarea1">Escribinos tu consulta</label>
-    			<textarea class="form-control" id="InputTextarea1" rows="3"></textarea>
+    			<label for="massage">Escribinos tu consulta</label>
+    			<textarea class="form-control" name="massage" id="massage" rows="3" required></textarea>
   			</div>
-  			<div class="form-group form-check">
-		    	<input type="checkbox" class="form-check-input" id="exampleCheck1">
-		    	<label class="form-check-label" for="Check1">Recibir novedades y promociones por email</label>
-		  	</div>
 		  	<!-- Modal -->
 			<div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
 			  <div class="modal-dialog">
@@ -66,22 +62,42 @@
 			    </div>
 			  </div>
 			</div>
-			<button type="button" class="btn btn-dark" data-toggle="modal" data-target="#Modal1">
+			<div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <h5 class="modal-title" id="ModalLabel">Ha ocurrido un problema</h5>
+					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					  </button>
+					</div>
+					<div class="modal-body">
+					  No pudimos enviar su consulta en este momento, por favor intente nuevamente en unos minutos.
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			<button type="submit" class="btn btn-dark" data-toggle="modalx" data-target="#Modal1x">
 			  Enviar
 			</button>
 			<button type="reset" class="btn btn-danger ml-1">
 				Limpiar
 			</button>
+			<div id="status"></div>
 		</form>
 		<iframe class="border border-secondary rounded" id="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52591.21050082419!2d-58.54168345271266!3d-34.52947810241279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6ad5df27b3b%3A0xb31979a45300fad2!2sVicente%20L%C3%B3pez%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1623109475774!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy">
 		</iframe>
 	</div>
 	<footer>
 		<i class="fas fa-map-marker-alt fa-lg"></i>
-		<h5>Buenos Aires, Argentina</h5>
+		<h5>Buenos Aires, Argentina - <span class="rojo">© 2021</span></h5>
 		<img class="footer__MediosPago" src="media/mp.png" alt="Mercado Pago">
 	</footer>
-	<script src="js/jquery-3.5.1.slim.min.js"></script>
+	<script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/formspree.js"></script>
 </body>
 </html>
