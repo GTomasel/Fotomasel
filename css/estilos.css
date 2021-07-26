@@ -1,6 +1,7 @@
 /*Colores*/
 /*Fuentes*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 body {
   font-family: "Roboto Slab", serif;
   font-weight: 300;
@@ -21,7 +22,7 @@ body {
   font-size: 1.5rem;
 }
 
-.rojo {
+.rojoCustom {
   color: #ff1c2b;
 }
 
@@ -52,11 +53,16 @@ nav .navbar-toggler {
 
 /*Main*/
 .main__fondo {
-  width: 100%;
   height: 100vh;
-  display: block;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.main__fondo-contain {
+  margin-top: 4vh;
+  height: 96vh;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .main__flechaVolver {
@@ -65,7 +71,7 @@ nav .navbar-toggler {
   color: #5e5e5e;
   right: 0.6rem;
   bottom: 70px;
-  z-index: 20;
+  z-index: 200;
   -webkit-transition: .2s ease;
   transition: .2s ease;
 }
@@ -77,9 +83,6 @@ nav .navbar-toggler {
 
 /*Slideshows y bio*/
 .flexSlideshow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin: 0.5rem;
   padding: 1rem 0.5rem 2rem 0.5rem;
   font-size: 1.1rem;
@@ -121,7 +124,7 @@ nav .navbar-toggler {
   background: -webkit-gradient(linear, left top, left bottom, from(#121212), color-stop(50%, rgba(18, 18, 18, 0.913119)), to(rgba(18, 18, 18, 0.946732)));
   background: linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.913119) 50%, rgba(18, 18, 18, 0.946732) 100%);
   padding: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 5.5rem;
   font-size: 1.1rem;
 }
 
@@ -141,12 +144,6 @@ nav .navbar-toggler {
 }
 
 .estiloParrafos__redes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-top: 2rem;
   padding: 0rem;
   -ms-flex-flow: wrap;
@@ -206,6 +203,7 @@ footer {
   background: linear-gradient(180deg, #121212 0%, #1d1d1d 50%, #121212 100%);
   margin-top: 2rem;
   padding: 1.75rem 0;
+  z-index: 100;
 }
 
 footer .footer__MediosPago {
@@ -229,33 +227,71 @@ footer .fa-map-marker-alt {
   margin-left: 1.25rem;
 }
 
+/*Presupuestos*/
+.flexPresu {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 100px;
+}
+
+.flexPresu .flexPresu__foto img {
+  height: 80vw;
+  margin-bottom: 5vw;
+}
+
+.flexPresu .flexPresu__titulo {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+
+.flexPresu .table .thead-dark th {
+  background: -webkit-gradient(linear, left top, left bottom, from(#121212), color-stop(50%, #1d1d1d), to(#121212));
+  background: linear-gradient(180deg, #121212 0%, #1d1d1d 50%, #121212 100%);
+}
+
 /*Contacto*/
 .flexContactoMain {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-top: 15vh;
+  margin-top: 90px;
 }
 
 .flexContactoMain form {
   padding: 4vw;
   margin-bottom: 2vh;
-  position: relative;
+  width: 100%;
+}
+
+.flexContactoMain form .form-text {
+  color: #6a6a6a;
+}
+
+.flexContactoMain textarea {
+  resize: none;
 }
 
 .flexContactoMain p {
   font-weight: 600;
   font-size: 1.25rem;
   padding-bottom: 1rem;
+}
+
+.flexContactoMain .form-control {
+  font-weight: 300;
+}
+
+.flexContactoMain .form-control:focus {
+  border-color: #6a6a6a;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
 }
 
 .flexContactoMain #maps {
@@ -274,36 +310,6 @@ footer .fa-map-marker-alt {
   background: #e22634;
 }
 
-/*Presupuestos*/
-.flexPresu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-top: 15vh;
-}
-
-.flexPresu .flexPresu__foto img {
-  height: 80vw;
-  margin-bottom: 5vw;
-}
-
-.flexPresu .flexPresu__titulo {
-  font-size: 1rem;
-  display: block;
-  padding-bottom: 1rem;
-}
-
-.flexPresu .table .thead-dark th {
-  background: -webkit-gradient(linear, left top, left bottom, from(#121212), color-stop(50%, #1d1d1d), to(#121212));
-  background: linear-gradient(180deg, #121212 0%, #1d1d1d 50%, #121212 100%);
-}
-
 @media (min-width: 576px) {
   .main__flechaVolver {
     font-size: 3em;
@@ -312,9 +318,7 @@ footer .fa-map-marker-alt {
   }
   .carousel-caption h5 {
     font-size: 1.5rem;
-    font-weight: 300;
     line-height: 1;
-    color: #e3e3e3;
   }
   .flexSlideshow img {
     width: 45vw;
@@ -334,7 +338,6 @@ footer .fa-map-marker-alt {
         grid-template-columns: 3rem auto 15rem;
   }
   footer .footer__MediosPago {
-    width: 28vw;
     height: auto;
     padding: 0.15rem 5rem 0.15rem 0.5rem;
   }
@@ -347,12 +350,14 @@ footer .fa-map-marker-alt {
     margin: .5rem;
     padding-left: 4rem;
   }
+  .flexPresu {
+    margin-top: 120px;
+  }
 }
 
 @media (min-width: 992px) {
   nav .navbar__logo {
     height: 4.25rem;
-    min-height: 40px;
     margin: .4rem -.5rem 0 2rem;
   }
   nav a {
@@ -392,9 +397,6 @@ footer .fa-map-marker-alt {
     width: 60vw;
     height: 33.75vw;
   }
-  footer .footer__MediosPago {
-    width: 15vw;
-  }
   .flexContactoMain {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -403,6 +405,7 @@ footer .fa-map-marker-alt {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    margin-top: 110px;
   }
   .flexContactoMain form {
     width: 45vw;

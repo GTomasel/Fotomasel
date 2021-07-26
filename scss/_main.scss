@@ -1,7 +1,3 @@
-@mixin flexCenter {
-	display: flex;
-	align-items: center;	
-}
 @mixin VideoWide($x){
 	width: $x;
 	height: ($x*9)/16;
@@ -20,7 +16,7 @@ body{
 	margin-bottom: 1.5rem;
 	font-size: 1.5rem;
 }
-.rojo{
+.rojoCustom{
 	color: $colorRed;
 }
 
@@ -46,18 +42,21 @@ nav{
 
 /*Main*/
 .main__fondo{
-	width: 100%;
 	height: 100vh;
-	display: block;
 	object-fit: cover;
+}
+.main__fondo-contain{
+	margin-top: 4vh;
+	height: 96vh;
+	object-fit: contain;
 }
 .main__flechaVolver{
 	position: fixed;
 	font-size: 2em;
-	color: #5e5e5e;
+	color: $colorGrisOscuro;
 	right: 0.6rem;
 	bottom: 70px;
-	z-index: 20;
+	z-index: 200;
 	transition: .2s ease;
     &:hover{
         transform: scale(1.1);
@@ -65,7 +64,6 @@ nav{
 }
 /*Slideshows y bio*/
 .flexSlideshow{
-	display: flex;
 	margin: 0.5rem;
   	padding: 1rem 0.5rem 2rem 0.5rem;
   	font-size: 1.1rem;
@@ -97,7 +95,7 @@ nav{
 	background: $colorDark;
 	background: $gradienteTransparencia; 
 	padding: 2rem;
-	margin-bottom:5rem;
+	margin-bottom:5.5rem;
 	font-size: 1.1rem;
 	h2, h1{
 		font-weight: 200;
@@ -112,7 +110,6 @@ nav{
 	margin: -14rem 0 20rem;
 }
 .estiloParrafos__redes{
-	@include flexCenter;
 	margin-top: 2rem;
   	padding: 0rem;
   	flex-flow: wrap;
@@ -158,6 +155,7 @@ footer{
 	background: $gradienteFondo;
 	margin-top: 2rem;
 	padding: 1.75rem 0;
+	z-index: 100;
     .footer__MediosPago{
 		justify-self: end;
         height: 40px;
@@ -177,22 +175,52 @@ footer{
 	}
 }
 
+/*Presupuestos*/
+.flexPresu{
+	flex-direction: column-reverse;
+  	justify-content: space-around;
+  	margin-top: 100px;
+	.flexPresu__foto img{
+		height: 80vw;
+		margin-bottom: 5vw;
+	}
+	.flexPresu__titulo{
+		font-size: 1rem;
+		padding-bottom: 1rem;
+	}
+	.table .thead-dark th{
+		background: $gradienteFondo;
+	}
+}
+
 /*Contacto*/
 .flexContactoMain{
-	@include flexCenter;
 	flex-direction: column;
   	justify-content: space-around;
-  	margin-top: 15vh;
+  	margin-top: 90px;
 	form{
 		padding: 4vw;
 		margin-bottom: 2vh;
-		position: relative;
+		width: 100%;
+		.form-text{
+			color: $colorGris;
+		}
 	} 
+	textarea{
+		resize: none;
+	}
     p{
         font-weight:600;
         font-size: 1.25rem;
 		padding-bottom: 1rem;
     }
+	.form-control{
+		font-weight: 300;
+		&:focus{
+		border-color: $colorGris;
+		box-shadow: 0 0 0 .2rem rgba(0, 0, 0, 0.25);
+		}
+	}
 	#maps{
 		width: 88vw;
 		height: 44vh;
@@ -207,26 +235,6 @@ footer{
 	}
 } 
 
-/*Presupuestos*/
-.flexPresu{
-	display: flex;
-	flex-direction: column-reverse;
-  	justify-content: space-around;
-  	margin-top: 15vh;
-	.flexPresu__foto img{
-		height: 80vw;
-		margin-bottom: 5vw;
-	}
-	.flexPresu__titulo{
-		font-size: 1rem;
-		display: block;
-		padding-bottom: 1rem;
-	}
-	.table .thead-dark th{
-		background: $gradienteFondo;
-	}
-}
-
 @media (min-width: 576px){
 	.main__flechaVolver{
 		font-size: 3em;
@@ -236,9 +244,7 @@ footer{
 	.carousel-caption{
 		h5{
 		font-size: 1.5rem;
-		font-weight: 300;
 		line-height: 1;
-		color: $colorTiza;
 		}
 	}
 	.flexSlideshow {
@@ -261,7 +267,6 @@ footer{
 	footer{
 	    grid-template-columns: 3rem auto 15rem;
         .footer__MediosPago{
-			width: 28vw;
 			height: auto;
             padding: 0.15rem 5rem 0.15rem 0.5rem;
         }
@@ -275,13 +280,15 @@ footer{
 			padding-left: 4rem;
         }
 	}
+	.flexPresu{
+		margin-top: 120px;
+	}
 }
 
 @media (min-width: 992px){
 	nav{
 		.navbar__logo{
 			height: 4.25rem;
-			min-height: 40px;
 			margin: .4rem -.5rem 0 2rem;
 		}
 		a{
@@ -319,14 +326,10 @@ footer{
 			@include VideoWide(60vw);
 		}
 	}
-	footer{
-		.footer__MediosPago{
-		width: 15vw;
-		}	
-	}
 	.flexContactoMain{
 	flex-flow: row;
 	align-items: flex-start;
+	margin-top: 110px;
 		form{
 			width: 45vw;
 			height: 36vw;

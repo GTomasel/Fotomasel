@@ -6,13 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Esta es mi pagina web personal como fotógrafo profesional en la ciudad de Buenos Aires y alrededores, acá se pueden ver fotos de mis trabajos e información de mis servicios.">
 	<meta name="keywords"  content="FOTOGRAFO, FOTOGRAFIA, VIDEO, SERVICIO, BUENOS AIRES, BAUTISMO, FIESTA, CUMPLEAÑOS">
+	<link rel="icon" type="image/png" href="media/fav.png">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+	<link rel="stylesheet" href="css/aos.css">
 	<link rel="stylesheet" href="css/lity.css">
-	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+	<link rel="stylesheet" href="css/slick.css" type="text/css"/>
+	<link rel="stylesheet" href="css/slick-theme.css" type="text/css"/>
 	<link rel="stylesheet" href="css/estilos.css" type="text/css">
 </head>
 <body data-spy="scroll" data-target="#navbar" data-offset="300">
@@ -37,22 +38,25 @@
 		<a href="index.html"><i class="fas fa-chevron-circle-up main__flechaVolver"></i></a>
 	</div>
 	<div class="position-relative"><!--Imagen a modo presentacion-->
-		<img style="z-index: 100;" src="media\1.png" class="main__fondo position-absolute rellax" data-rellax-speed="-2" alt="Imagen de fondo principal">
+		<picture>
+			<source style="z-index: 100;" media="(min-width:769px)" class="main__fondo position-absolute rellax d-block w-100" srcset="media/fondo_d.png" data-rellax-speed="-2" alt="Imagen de fondo principal">
+			<img style="z-index: 100;" src="media\fondo_m.png" class="main__fondo position-absolute rellax d-block w-100" data-rellax-speed="-2" alt="Imagen de fondo principal">
+		</picture>
 		<div id="banner-images"> </div>
 		<script> 
-		var images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg', '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg', '20.jpg', '21.jpg', '22.jpg', '23.jpg', '24.jpg', '25.jpg', '26.jpg'];	
-		$('<img style="z-index: 50;" class="fade-in main__fondo main__fondo-contain rellax" data-rellax-speed="-4" src="media/fondos/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#banner-images');
+		var images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg', '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg', '20.jpg', '21.jpg', '22.jpg', '23.jpg', '24.jpg', '25.jpg', '26.jpg', '27.jpg', '28.jpg', '29.jpg', '30.jpg', '31.jpg'];	
+		$('<img style="z-index: 50;" class="fade-in main__fondo-contain rellax d-block w-100" data-rellax-speed="-4" src="media/fondos/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#banner-images');
 		</script>
 	</div>
 	<div class="estiloParrafos estiloParrafos-opaco text-center rellax" data-rellax-speed="-1">
-		<p class="estiloTitulos"><span class="rojo">S</span>ervicios de fotografía</p>
+		<p class="estiloTitulos"><span class="rojoCustom">S</span>ervicios de fotografía</p>
 		<h1 id="fotos">
 			Acá pueden ver una selección de imágenes de mis trabajos, incluyendo bautismos, retratos, cumpleaños, fiestas y bandas en vivo para las cuales también hago filmación de sus shows.
 		</h1>		
 	</div>	
 	
 	<div ><!--Slideshows, texto y bio-->
-		<div class="flexSlideshow overflow-hidden"><!--Slideshows-->
+		<div class="flexSlideshow d-flex overflow-hidden"><!--Slideshows-->
 			<div id="carouselBautismos" class="carousel slide carousel-fade customWidth" data-ride="carousel" data-aos="fade-up-right"><!--Carrousel_1-->
 			  <div class="carousel-inner border border-secondary rounded">
 			    <div class="carousel-item active">
@@ -358,7 +362,7 @@
 			</div>
 		</div>
 		<div class="text-center estiloParrafos estiloParrafos-margen rellax" data-rellax-speed="-1"><!--Pequeña biografía-->
-			<p class="estiloTitulos"><span class="rojo">S</span>obre mí</p>
+			<p class="estiloTitulos"><span class="rojoCustom">S</span>obre mí</p>
 			<div class="row">
 				<h2 class="col-lg ml-lg-5 mr-lg-3 ml-md-4 mr-md-4">
 					Me llamo Gabriel Tomasel, comencé con la fotografía aprendiendo de forma autodidacta en 2011, previamente ya experimentaba con cámaras compactas que habia en la familia o incluso los primeros celulares y ahí fué donde descubrí este mundo fascinante sacando fotos a todo lo que se me cruzaba por delante, teniendo que ser creativo ante las limitaciones de no tener una cámara "profesional".
@@ -369,7 +373,7 @@
 					Mi fuerte es capturar los momentos en su estado natural, sin poses ni peticiones de mirar a cámara, sino mezclarme entre la gente e ir buscando los gestos, los abrazos, las risas, todo de forma casual y que todo se muestre tal cual está ocurriendo.
 				</h2>
 			</div>
-			<div class="estiloParrafos__redes iconoLink iconoLink--animacion">
+			<div class="d-flex align-items-center estiloParrafos__redes iconoLink iconoLink--animacion">
 				<a href="https://www.facebook.com/FoTomasel" target="_blank"><i class="fab fa-facebook-square"></i></a>
 				<a href="https://wa.me/541123932745" target="_blank"><i class="fab fa-whatsapp"></i></a>
 				<a href="https://www.instagram.com/fotomasel" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -377,7 +381,7 @@
 		</div>
 	</div><!--End Slideshows, texto y bio-->
 	<div><!--Video de muestra-->
-		<p id="video" class="text-center estiloTitulos"><span class="rojo">V</span>ideo clips</p>
+		<p id="video" class="text-center estiloTitulos"><span class="rojoCustom">V</span>ideo clips</p>
 		<div class="youtube border border-secondary" data-aos="fade-up">
 			<div><a href="https://youtu.be/TUzmEr6qzWU" data-lity><img src="media/marca.jpg" alt="fondo"></a></div>
 			<div><a href="https://youtu.be/YM5CtD6F-gY" data-lity><img src="media/nadie.jpg" alt="fondo"></a></div>
@@ -387,18 +391,18 @@
 	</div><!--End Video de muestra-->
 	<footer>
 		<i class="fas fa-map-marker-alt fa-lg"></i>
-		<h5>Buenos Aires, Argentina - <span class="rojo">© 2021</span></h5>
+		<h5>Buenos Aires, Argentina - <span class="rojoCustom">© 2021</span></h5>
 		<img class="footer__MediosPago" src="media/mp.png" alt="Mercado Pago">
 	</footer>
 	<script src="https://kit.fontawesome.com/026c5ee3ed.js" crossorigin="anonymous"></script>
+	<script src="js/aos.js"></script>
 	<script src="js/rellax.min.js"></script>
 	<script src="js/lity.js"></script>
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script type="text/javascript" src="js/slick.min.js"></script>
-	<script type="text/javascript" src="js/slick_custom.js"></script>
+	<script src="js/slick.min.js" type="text/javascript"></script>
+	<script src="js/slick_custom.js" type="text/javascript"></script>
 	<script>
+		AOS.init();
 		var rellax = new Rellax('.rellax');
-	  AOS.init();
   </script>
 </body>
 </html>

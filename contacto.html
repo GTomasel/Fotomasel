@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Mediante este formulario podés ponerte en contacto y sacarte cualquier duda acerca del servicio u obtener mas informacion, además de ver un mapa de la zona donde me encuentro.">
+	<link rel="icon" type="image/png" href="media/fav.png">
 	<script src="https://kit.fontawesome.com/026c5ee3ed.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
@@ -27,9 +28,9 @@
 			</div>
 		</nav>
 	</header><!--End Header-->	
-	<div class="flexContactoMain"><!--Main-->
+	<div class="flexContactoMain d-flex align-items-center"><!--Main-->
 		<form action="https://formspree.io/f/mleawaad" id="my-form" method="POST">
-			<p><span class="rojo">C</span>ONTACTO</p>
+			<p><span class="rojoCustom">C</span>ONTACTO</p>
 			<div class="form-group">
 		   		<label for="firstName">Nombre y Apellido</label>
 		    	<input type="text" class="form-control" id="firstName" name="firstName" required>
@@ -37,7 +38,7 @@
 		  	<div class="form-group">
 		    	<label for="email">Direccion de E-mail</label>
 		    	<input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
-		    	<small id="emailHelp" class="form-text text-muted">Nunca compartiremos tus datos personales con nadie más.</small>
+		    	<small id="emailHelp" class="form-text">Nunca compartiremos tus datos personales.</small>
 		  	</div>	  	
 		  	<div class="form-group">
     			<label for="massage">Escribinos tu consulta</label>
@@ -48,7 +49,7 @@
 			  <div class="modal-dialog">
 			    <div class="modal-content">
 			      <div class="modal-header">
-			        <h5 class="modal-title" id="ModalLabel">Consulta enviada!</h5>
+			        <h5 class="modal-title" id="ModalLabel"><span class="text-success"><i class="fas fa-check-circle fa-lg"></i> Consulta enviada!</span></h5>
 			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			          <span aria-hidden="true">&times;</span>
 			        </button>
@@ -66,7 +67,7 @@
 				<div class="modal-dialog">
 				  <div class="modal-content">
 					<div class="modal-header">
-					  <h5 class="modal-title" id="ModalLabel">Ha ocurrido un problema</h5>
+					  <h5 class="modal-title" id="ModalLabel"><span class="rojoCustom"><i class="fas fa-exclamation-circle fa-lg"></i> Ha ocurrido un problema</span></h5>
 					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					  </button>
@@ -93,7 +94,7 @@
 	</div>
 	<footer>
 		<i class="fas fa-map-marker-alt fa-lg"></i>
-		<h5>Buenos Aires, Argentina - <span class="rojo">© 2021</span></h5>
+		<h5>Buenos Aires, Argentina - <span class="rojoCustom">© 2021</span></h5>
 		<img class="footer__MediosPago" src="media/mp.png" alt="Mercado Pago">
 	</footer>
 	<script src="js/jquery.min.js"></script>
