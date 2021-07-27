@@ -59,10 +59,15 @@ nav .navbar-toggler {
 }
 
 .main__fondo-contain {
-  margin-top: 4vh;
-  height: 96vh;
+  margin: 16vh auto 0;
+  height: 84vh;
   -o-object-fit: contain;
      object-fit: contain;
+  width: 110vw;
+}
+
+#banner-images {
+  overflow: hidden;
 }
 
 .main__flechaVolver {
@@ -70,7 +75,7 @@ nav .navbar-toggler {
   font-size: 2em;
   color: #5e5e5e;
   right: 0.6rem;
-  bottom: 70px;
+  bottom: 74px;
   z-index: 200;
   -webkit-transition: .2s ease;
   transition: .2s ease;
@@ -176,8 +181,8 @@ nav .navbar-toggler {
 }
 
 .youtube img {
-  width: 100vw;
-  height: 56.25vw;
+  width: 105vw;
+  height: 59.0625vw;
 }
 
 .slick-prev:before, .slick-next:before {
@@ -193,38 +198,88 @@ nav .navbar-toggler {
 footer {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3rem auto auto;
-      grid-template-columns: 3rem auto auto;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  justify-items: stretch;
   background: -webkit-gradient(linear, left top, left bottom, from(#121212), color-stop(50%, #1d1d1d), to(#121212));
   background: linear-gradient(180deg, #121212 0%, #1d1d1d 50%, #121212 100%);
   margin-top: 2rem;
-  padding: 1.75rem 0;
+  padding: 1.9rem 0 0;
   z-index: 100;
 }
 
 footer .footer__MediosPago {
   -ms-grid-column-align: end;
       justify-self: end;
-  height: 40px;
+  height: 1.75rem;
   max-height: 50px;
-  padding: 0.15rem 1.5rem 0.15rem 0.5rem;
+  padding-right: 1rem;
+}
+
+footer h4 {
+  font-weight: 200;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  font-size: .9rem;
+  color: #e3e3e3;
+  margin: 0;
 }
 
 footer h5 {
   font-weight: 200;
-  text-align: left;
-  font-size: 1rem;
+  font-size: .6rem;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
   color: #e3e3e3;
-  margin: .25rem .25rem .25rem 0rem;
+  text-align: center;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  padding-top: 1.2rem;
 }
 
 footer .fa-map-marker-alt {
   color: #ff1c2b;
-  margin-left: 1.25rem;
+  margin: 0 .5rem 0 1rem;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  line-height: 2.3rem;
+  font-size: 1.2rem;
+}
+
+footer .footer__iconos {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+  line-height: 0;
+}
+
+footer .footer__iconos i {
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+}
+
+footer .footer__iconos--custom {
+  color: #e3e3e3;
+  font-size: 1.75rem;
+  margin: 0 .3rem;
+}
+
+footer .footer__location {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*Presupuestos*/
@@ -311,10 +366,16 @@ footer .fa-map-marker-alt {
 }
 
 @media (min-width: 576px) {
+  .main__fondo-contain {
+    width: 75vw;
+  }
+  #banner-images {
+    overflow: visible;
+  }
   .main__flechaVolver {
-    font-size: 3em;
+    font-size: 2.75em;
     right: .6rem;
-    bottom: 35px;
+    bottom: 64px;
   }
   .carousel-caption h5 {
     font-size: 1.5rem;
@@ -333,22 +394,19 @@ footer .fa-map-marker-alt {
     font-size: 8px;
     top: 8px;
   }
-  footer {
-    -ms-grid-columns: 3rem auto 15rem;
-        grid-template-columns: 3rem auto 15rem;
-  }
   footer .footer__MediosPago {
-    height: auto;
-    padding: 0.15rem 5rem 0.15rem 0.5rem;
+    height: 2rem;
+    padding-right: 3rem;
+  }
+  footer h4 {
+    font-size: 1rem;
   }
   footer .fa-map-marker-alt {
-    padding-left: 4rem;
-    font-size: 1.9em;
+    margin: 0 .5rem 0 3rem;
+    font-size: 1.4rem;
   }
-  footer h5 {
-    font-size: 1.25rem;
-    margin: .5rem;
-    padding-left: 4rem;
+  footer .footer__iconos--custom {
+    font-size: 2rem;
   }
   .flexPresu {
     margin-top: 120px;
@@ -375,8 +433,11 @@ footer .fa-map-marker-alt {
             justify-content: space-evenly;
   }
   .main__fondo-contain {
+    height: 100vh;
+    margin: auto;
     -o-object-fit: contain;
        object-fit: contain;
+    width: 90vw;
   }
   .iconoLink i {
     font-size: 3em;
@@ -396,6 +457,27 @@ footer .fa-map-marker-alt {
   .youtube img {
     width: 60vw;
     height: 33.75vw;
+  }
+  footer {
+    padding-top: 2.75rem;
+  }
+  footer .footer__MediosPago {
+    height: 2.5rem;
+    padding-right: 3.5rem;
+  }
+  footer h4 {
+    font-size: 1.1rem;
+  }
+  footer h5 {
+    padding-top: 2.25rem;
+    font-size: .8rem;
+  }
+  footer .fa-map-marker-alt {
+    margin: 0 .5rem 0 3.5rem;
+    font-size: 1.5rem;
+  }
+  footer .footer__iconos--custom {
+    font-size: 2.5rem;
   }
   .flexContactoMain {
     -webkit-box-orient: horizontal;

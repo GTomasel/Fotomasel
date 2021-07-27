@@ -46,16 +46,20 @@ nav{
 	object-fit: cover;
 }
 .main__fondo-contain{
-	margin-top: 4vh;
-	height: 96vh;
+	margin: 16vh auto 0;
+	height: 84vh;
 	object-fit: contain;
+	width: 110vw;
+}
+#banner-images{
+	overflow: hidden;
 }
 .main__flechaVolver{
 	position: fixed;
 	font-size: 2em;
 	color: $colorGrisOscuro;
 	right: 0.6rem;
-	bottom: 70px;
+	bottom: 74px;
 	z-index: 200;
 	transition: .2s ease;
     &:hover{
@@ -136,7 +140,7 @@ nav{
 	margin: auto;
 	width: 100vw;
 	img{
-		@include VideoWide(100vw);
+		@include VideoWide(105vw);
 	}
 }
 .slick-prev:before, .slick-next:before { 
@@ -149,29 +153,58 @@ nav{
 /*Footer*/
 footer{
 	display: grid;
-	grid-template-columns: 3rem auto auto;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
 	align-items: center;
-	justify-items: stretch;
 	background: $gradienteFondo;
 	margin-top: 2rem;
-	padding: 1.75rem 0;
+	padding: 1.9rem 0 0;
 	z-index: 100;
     .footer__MediosPago{
 		justify-self: end;
-        height: 40px;
+        height: 1.75rem;
 		max-height: 50px;
-        padding: 0.15rem 1.5rem 0.15rem 0.5rem;
+        padding-right: 1rem;
     }
-    h5{
+    h4{
 		font-weight: 200;
-        text-align: left;
-        font-size: 1rem;
+		justify-self: start;
+		font-size: .9rem;
         color: $colorTiza;
-		margin: .25rem .25rem .25rem 0rem;
+		margin: 0;
   	}
+	h5{
+		font-weight: 200;
+		font-size: .6rem;
+		grid-column-start:1;
+		grid-column-end:4;
+		color: $colorTiza;
+		text-align: center;
+		align-self: end;
+		padding-top: 1.2rem;
+	}
 	.fa-map-marker-alt{
 		color: $colorRed;
-		margin-left: 1.25rem;
+		margin: 0 .5rem 0 1rem;
+		justify-self: start;
+		line-height: 2.3rem;
+		font-size: 1.2rem;
+	}
+	.footer__iconos{
+		justify-content: space-evenly;
+		transition: transform .2s ease;
+		line-height: 0;
+		i{
+			transition: transform .2s ease;
+		}
+	}
+	.footer__iconos--custom{
+		color: $colorTiza;
+		font-size: 1.75rem;
+		margin: 0 .3rem;
+	}
+	.footer__location{
+		align-items:center;
 	}
 }
 
@@ -236,10 +269,16 @@ footer{
 } 
 
 @media (min-width: 576px){
+	.main__fondo-contain{
+		width: 75vw;
+	}
+	#banner-images{
+		overflow: visible;
+	}
 	.main__flechaVolver{
-		font-size: 3em;
+		font-size: 2.75em;
 		right: .6rem;
-		bottom: 35px;
+		bottom: 64px;
 	}
 	.carousel-caption{
 		h5{
@@ -265,20 +304,20 @@ footer{
 		top: 8px;
 	}
 	footer{
-	    grid-template-columns: 3rem auto 15rem;
-        .footer__MediosPago{
-			height: auto;
-            padding: 0.15rem 5rem 0.15rem 0.5rem;
-        }
-		.fa-map-marker-alt{
-			padding-left: 4rem;
-			font-size: 1.9em;
+		.footer__MediosPago{
+			height: 2rem;
+			padding-right: 3rem;
 		}
-        h5{
-            font-size: 1.25rem;
-			margin: .5rem;
-			padding-left: 4rem;
-        }
+		h4{
+			font-size: 1rem;
+		  }
+		.fa-map-marker-alt{
+			margin: 0 .5rem 0 3rem;
+			font-size: 1.4rem;
+		}
+		.footer__iconos--custom{
+			font-size: 2rem;
+		}
 	}
 	.flexPresu{
 		margin-top: 120px;
@@ -304,7 +343,10 @@ footer{
 		}
 	}
 	.main__fondo-contain{
+		height: 100vh;
+		margin: auto;
 		object-fit: contain;
+		width: 90vw;
 	}
 	.iconoLink{
 		i{
@@ -324,6 +366,27 @@ footer{
 		width: 85vw;
 		img{
 			@include VideoWide(60vw);
+		}
+	}
+	footer{
+		padding-top: 2.75rem;
+		.footer__MediosPago{
+			height: 2.5rem;
+			padding-right: 3.5rem;
+		}
+		h4{
+			font-size: 1.1rem;
+		  }
+		h5{
+			padding-top: 2.25rem;
+			font-size: .8rem;
+		}
+		.fa-map-marker-alt{
+			margin: 0 .5rem 0 3.5rem;
+			font-size: 1.5rem;
+		}
+		.footer__iconos--custom{
+			font-size: 2.5rem;
 		}
 	}
 	.flexContactoMain{
