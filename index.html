@@ -20,14 +20,16 @@
 	<header id="header">	
 		<nav class="navbar navbar-expand-lg navbar-dark fixed-top flex-row" id="navbar">
 			<a class="navbar-brand" href="index.html"><img class="navbar__logo mr-lg-3" src="media/logo3.png" title="logo" alt="logo"></a>
-			<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"></span>
+			<button id="nav-icon4" class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			  	<span></span>
+				<span></span>
+				<span></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 			  <div id="links" class="navbar-nav align-items-center mt-2 my-2 mx-auto w-100">
-				<a class="nav-link active" href="#header">INICIO <span class="sr-only">(current)</span></a>
-				<a class="nav-link" href="#fotos">FOTOS</a>
-				<a class="nav-link" href="#video">VIDEO</a>
+				<a class="nav-link js-scroll-trigger active" href="#header">INICIO <span class="sr-only">(current)</span></a>
+				<a class="nav-link js-scroll-trigger" href="#fotos">FOTOS</a>
+				<a class="nav-link js-scroll-trigger" href="#video">VIDEO</a>
 				<a class="nav-link" href="presupuestos.html">PRESUPUESTOS</a>
 				<a class="nav-link" href="contacto.html">CONTACTO</a>
 			  </div>
@@ -35,7 +37,7 @@
 		</nav>
 	</header><!--End Header-->
 	<div><!--Flecha volver-->
-		<a href="index.html"><i class="fas fa-chevron-circle-up main__flechaVolver"></i></a>
+		<button onclick="topFunction()" id="botonVolver" class="fas fa-chevron-circle-up main__flechaVolver" title="Go to top"></button>
 	</div>
 	<div class="position-relative"><!--Imagen a modo presentacion-->
 		<picture>
@@ -54,14 +56,13 @@
 			Acá pueden ver una selección de imágenes de mis trabajos, incluyendo bautismos, retratos, cumpleaños, fiestas y bandas en vivo para las cuales también hago grabaciones de sus shows.
 		</h1>		
 	</div>	
-	
 	<div ><!--Slideshows, texto y bio-->
 		<div class="flexSlideshow d-flex overflow-hidden"><!--Slideshows-->
-			<div id="carouselBautismos" class="carousel slide carousel-fade customWidth" data-ride="carousel" data-aos="fade-up-right"><!--Carrousel_1-->
+			<div id="carouselBautismos" class="carousel slide carousel-fade flexSlideshow--customWidth" data-ride="carousel" data-aos="fade-up-right"><!--Carrousel_1-->
 			  <div class="carousel-inner border border-secondary rounded">
 			    <div class="carousel-item active">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Bautismo_H1.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bautismo_H1.jpg">
 					  <img src="media/fotos/Bautismo_V1.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -70,7 +71,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Bautismo_H2.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bautismo_H2.jpg">
 					  <img src="media/fotos/Bautismo_V2.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -79,7 +80,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Bautismo_H3.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bautismo_H3.jpg">
 					  <img src="media/fotos/Bautismo_V3.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -88,7 +89,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Bautismo_H4.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bautismo_H4.jpg">
 					  <img src="media/fotos/Bautismo_V4.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -105,11 +106,11 @@
 			    <span class="sr-only">Siguiente</span>
 			  </a>
 			</div>
-			<div id="carouselBooks" class="carousel slide carousel-fade customWidth" data-ride="carousel" data-aos="fade-up-left"><!--Carrousel_2-->
+			<div id="carouselBooks" class="carousel slide carousel-fade flexSlideshow--customWidth" data-ride="carousel" data-aos="fade-up-left"><!--Carrousel_2-->
 			  <div class="carousel-inner border border-secondary rounded">
 			    <div class="carousel-item active">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Book_H1.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H1.jpg">
 					  <img src="media/fotos/Book_V1.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -118,7 +119,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Book_H2.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H2.jpg">
 					  <img src="media/fotos/Book_V2.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -127,7 +128,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Book_H3.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H3.jpg">
 					  <img src="media/fotos/Book_V3.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -136,7 +137,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Book_H4.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H4.jpg">
 					  <img src="media/fotos/Book_V4.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -145,7 +146,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Book_H5.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H5.jpg">
 					  <img src="media/fotos/Book_V5.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -154,7 +155,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Book_H6.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H6.jpg">
 					  <img src="media/fotos/Book_V6.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -163,7 +164,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Book_H7.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H7.jpg">
 					  <img src="media/fotos/Book_V7.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -180,11 +181,11 @@
 			    <span class="sr-only">Siguiente</span>
 			  </a>
 			</div>
-			<div id="carouselFiestas" class="carousel slide carousel-fade customWidth" data-ride="carousel" data-aos="fade-up-right"><!--Carrousel_3-->
+			<div id="carouselFiestas" class="carousel slide carousel-fade flexSlideshow--customWidth" data-ride="carousel" data-aos="fade-up-right"><!--Carrousel_3-->
 			  <div class="carousel-inner border border-secondary rounded">
 			    <div class="carousel-item active">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/15_H1.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/15_H1.jpg">
 					  <img src="media/fotos/15_V1.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -193,7 +194,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/15_H2.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/15_H2.jpg">
 					  <img src="media/fotos/15_V2.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -202,7 +203,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/15_H3.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/15_H3.jpg">
 					  <img src="media/fotos/15_V3.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -211,7 +212,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/15_H4.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/15_H4.jpg">
 					  <img src="media/fotos/15_V4.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -220,7 +221,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/15_H5.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/15_H5.jpg">
 					  <img src="media/fotos/15_V5.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -237,11 +238,11 @@
 			    <span class="sr-only">Siguiente</span>
 			  </a>
 			</div>
-			<div id="carouselBandas" class="carousel slide carousel-fade customWidth" data-ride="carousel" data-aos="fade-up-left"><!--Carrousel_4-->
+			<div id="carouselBandas" class="carousel slide carousel-fade flexSlideshow--customWidth" data-ride="carousel" data-aos="fade-up-left"><!--Carrousel_4-->
 			  <div class="carousel-inner border border-secondary rounded">
 			    <div class="carousel-item active">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Bandas_H1.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bandas_H1.jpg">
 					  <img src="media/fotos/Bandas_V1.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -250,7 +251,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Bandas_H2.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bandas_H2.jpg">
 					  <img src="media/fotos/Bandas_V2.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -259,7 +260,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Bandas_H3.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bandas_H3.jpg">
 					  <img src="media/fotos/Bandas_V3.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -268,7 +269,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Bandas_H4.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bandas_H4.jpg">
 					  <img src="media/fotos/Bandas_V4.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -277,7 +278,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Bandas_H5.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bandas_H5.jpg">
 					  <img src="media/fotos/Bandas_V5.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -294,11 +295,11 @@
 			    <span class="sr-only">Siguiente</span>
 			  </a>
 			</div>
-			<div id="carouselEventos" class="carousel slide carousel-fade customWidth" data-ride="carousel" data-aos="fade-up"><!--Carrousel_5-->
+			<div id="carouselEventos" class="carousel slide carousel-fade flexSlideshow--customWidth" data-ride="carousel" data-aos="fade-up"><!--Carrousel_5-->
 			  <div class="carousel-inner border border-secondary rounded">
 			    <div class="carousel-item active">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Eventos_H1.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H1.jpg">
 					  <img src="media/fotos/Eventos_V1.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -307,7 +308,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Eventos_H2.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H2.jpg">
 					  <img src="media/fotos/Eventos_V2.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -316,7 +317,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Eventos_H3.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H3.jpg">
 					  <img src="media/fotos/Eventos_V3.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -325,7 +326,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Eventos_H4.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H4.jpg">
 					  <img src="media/fotos/Eventos_V4.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -334,7 +335,7 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Eventos_H5.jpg">
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H5.jpg">
 					  <img src="media/fotos/Eventos_V5.jpg" class="d-block w-100" alt="fondo">
 					</picture> 
 			     	<div class="carousel-caption">
@@ -343,9 +344,8 @@
 			    </div>
 			    <div class="carousel-item">
 			    	<picture>
-					  <source media="(min-width:650px)" class="d-block w-100" srcset="media/fotos/Eventos_H6.jpg">
-					  <img src="media/fotos/Eventos_V6.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
+					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H6.jpg">
+					  <img src="media/fotos/Eventos_V6.jpg" class="d-block w-100" alt="fondo"ture> 
 			     	<div class="carousel-caption">
 			        	<h5>Eventos</h5>
 			      	</div>
@@ -363,13 +363,19 @@
 		</div>
 		<div class="text-center estiloParrafos estiloParrafos-margen rellax" data-rellax-speed="-1"><!--Pequeña biografía-->
 			<p class="estiloTitulos"><span class="rojoCustom">S</span>obre mí</p>
-			<div class="row">
+			<div id="textoDesktop" class="row">
 				<h2 class="col-lg ml-lg-5 mr-lg-3 ml-md-4 mr-md-4">
 					Me llamo Gabriel Tomasel, comencé con la fotografía aprendiendo de forma autodidacta en 2011, previamente ya experimentaba con cámaras compactas que había en la familia o incluso los primeros celulares y ahí fue donde descubrí este mundo fascinante sacando fotos a todo lo que se me cruzaba por delante, teniendo que ser creativo ante las limitaciones de no tener una cámara "profesional".
 					Ya con mi réflex en mano comencé a hacer mis primeros retratos, con amigos y familiares, llevando mi cámara a cualquier evento, reunión, cumpleaños o salida para no perder oportunidad de capturar todo lo que captara mi interés.
 				</h2>
 				<h2 class="col-lg mr-lg-5 ml-lg-3 ml-md-4 mr-md-4">
 					En 2015 comencé un curso de fotografía donde por 2 años aprendí todo sobre el mundo analógico, los rollos de película, los químicos, el cuarto oscuro, desempolvé las cámaras analógicas de mis abuelos que al ver mi interés me las terminaron regalando y fue una experiencia única, con ese plus de estar usando las mismas máquinas con las que ellos sacaron tantas fotos de jóvenes.
+					Mi fuerte es capturar los momentos en su estado natural, sin poses ni peticiones de mirar a cámara, sino mezclarme entre la gente e ir buscando los gestos, los abrazos, las risas, todo de forma casual y que todo se muestre tal cual está ocurriendo.
+				</h2>
+			</div>
+			<div id="textoMobile">
+				<h2 class="col-lg mr-lg-5 ml-lg-3 ml-md-4 mr-md-4">
+					Me llamo Gabriel Tomasel, comencé con la fotografía aprendiendo de forma autodidacta en 2011, previamente ya experimentaba con cámaras compactas que había en la familia o incluso los primeros celulares y ahí fue donde descubrí este mundo fascinante sacando fotos a todo lo que se me cruzaba por delante, teniendo que ser creativo ante las limitaciones de no tener una cámara "profesional".
 					Mi fuerte es capturar los momentos en su estado natural, sin poses ni peticiones de mirar a cámara, sino mezclarme entre la gente e ir buscando los gestos, los abrazos, las risas, todo de forma casual y que todo se muestre tal cual está ocurriendo.
 				</h2>
 			</div>
@@ -383,10 +389,10 @@
 	<div><!--Video de muestra-->
 		<p id="video" class="text-center estiloTitulos"><span class="rojoCustom">V</span>ideo clips</p>
 		<div class="youtube border border-secondary" data-aos="fade-up">
-			<div><a href="https://youtu.be/TUzmEr6qzWU" data-lity><img src="media/video_cover/marca.jpg" alt="fondo"></a></div>
-			<div><a href="https://youtu.be/YM5CtD6F-gY" data-lity><img src="media/video_cover/nadie.jpg" alt="fondo"></a></div>
-			<div><a href="https://youtu.be/Bz3aZaags3s" data-lity><img src="media/video_cover/volvere.jpg" alt="fondo"></a></div>
-			<div><a href="https://youtu.be/0l_x3ekf1oU" data-lity><img src="media/video_cover/vasaver.jpg" alt="fondo"></a></div>
+			<div><a href="https://youtu.be/TUzmEr6qzWU" data-lity><img src="media/video_cover/marca.jpg" alt="Videos de Youtube"></a></div>
+			<div><a href="https://youtu.be/YM5CtD6F-gY" data-lity><img src="media/video_cover/nadie.jpg" alt="Videos de Youtube"></a></div>
+			<div><a href="https://youtu.be/Bz3aZaags3s" data-lity><img src="media/video_cover/volvere.jpg" alt="Videos de Youtube"></a></div>
+			<div><a href="https://youtu.be/0l_x3ekf1oU" data-lity><img src="media/video_cover/vasaver.jpg" alt="Videos de Youtube"></a></div>
 		</div>
 	</div><!--End Video de muestra-->
 	<footer>
@@ -394,7 +400,7 @@
 			<i class="fas fa-map-marker-alt fa-lg"></i>
 			<h4>Buenos Aires</h4>
 		</div>
-		<div class="d-flex footer__iconos iconoLink--animacion">
+		<div class="d-flex footer__iconos footer__iconos--animacion">
 			<a href="https://www.facebook.com/FoTomasel" target="_blank"><i class="fab fa-facebook-square footer__iconos--custom"></i></a>
 			<a href="https://wa.me/541123932745" target="_blank"><i class="fab fa-whatsapp footer__iconos--custom"></i></a>
 			<a href="https://www.instagram.com/fotomasel" target="_blank"><i class="fab fa-instagram footer__iconos--custom"></i></a>
@@ -408,7 +414,7 @@
 	<script src="js/rellax.min.js"></script>
 	<script src="js/lity.js"></script>
 	<script src="js/slick.min.js" type="text/javascript"></script>
-	<script src="js/slick_custom.js" type="text/javascript"></script>
+	<script src="js/custom.js" type="text/javascript"></script>
 	<script>
 		AOS.init();
 		var rellax = new Rellax('.rellax');
