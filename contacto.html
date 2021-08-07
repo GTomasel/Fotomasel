@@ -12,19 +12,21 @@
 </head>
 <body>
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark fixed-top flex-row">
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top flex-row" id="navbar">
 			<a class="navbar-brand" href="index.html"><img class="navbar__logo mr-lg-3" src="media/logo3.png" title="logo" alt="logo"></a>
-			<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"></span>
+			<button id="nav-icon" class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span></span>
+				<span></span>
+				<span></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-			  <div id="links" class="navbar-nav align-items-center mt-2 my-2 mx-auto w-100">
-				<a class="nav-link" href="index.html">INICIO <span class="sr-only">(current)</span></a>
-				<a class="nav-link" href="index.html#fotos">FOTOS</a>
-				<a class="nav-link" href="index.html#video">VIDEO</a>
-				<a class="nav-link" href="presupuestos.html">PRESUPUESTOS</a>
-				<a class="nav-link active" href="contacto.html">CONTACTO</a>
-			  </div>
+				<div id="links" class="navbar-nav align-items-center mt-2 my-2 mx-auto w-100">
+					<a class="nav-link" href="index.html">INICIO <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="index.html#fotos">FOTOS</a>
+					<a class="nav-link" href="index.html#video">VIDEO</a>
+					<a class="nav-link" href="presupuestos.html">PRESUPUESTOS</a>
+					<a class="nav-link active" href="contacto.html">CONTACTO</a>
+				</div>
 			</div>
 		</nav>
 	</header><!--End Header-->	
@@ -46,51 +48,46 @@
   			</div>
 		  	<!-- Modal -->
 			<div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-			  <div class="modal-dialog">
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <h5 class="modal-title" id="ModalLabel"><span class="text-success"><i class="fas fa-check-circle fa-lg"></i> Consulta enviada!</span></h5>
-			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			          <span aria-hidden="true">&times;</span>
-			        </button>
-			      </div>
-			      <div class="modal-body">
-			        Gracias por enviarnos su consulta, le responderemos a la brevedad.
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-			      </div>
-			    </div>
-			  </div>
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="ModalLabel"><span class="text-success"><i class="fas fa-check-circle fa-lg"></i> Consulta enviada!</span></h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							Gracias por enviarnos su consulta, le responderemos a la brevedad.
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
-				  <div class="modal-content">
-					<div class="modal-header">
-					  <h5 class="modal-title" id="ModalLabel"><span class="rojoCustom"><i class="fas fa-exclamation-circle fa-lg"></i> Ha ocurrido un problema</span></h5>
-					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					  </button>
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="ModalLabel"><span class="rojoCustom"><i class="fas fa-exclamation-circle fa-lg"></i> Ha ocurrido un problema</span></h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							No pudimos enviar su consulta en este momento, por favor intente nuevamente en unos minutos.
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+						</div>
 					</div>
-					<div class="modal-body">
-					  No pudimos enviar su consulta en este momento, por favor intente nuevamente en unos minutos.
-					</div>
-					<div class="modal-footer">
-					  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-					</div>
-				  </div>
 				</div>
-			  </div>
-			<button type="submit" class="btn btn-dark" data-toggle="modalx" data-target="#Modal1x">
-			  Enviar
-			</button>
-			<button type="reset" class="btn btn-danger ml-1">
-				Limpiar
-			</button>
+			</div>
+			<button type="submit" class="btn btn-dark" data-toggle="modalx" data-target="#Modal1x">Enviar</button>
+			<button type="reset" class="btn btn-danger ml-1">Limpiar</button>
 			<div id="status"></div>
 		</form>
-		<iframe class="border border-secondary rounded" id="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52591.21050082419!2d-58.54168345271266!3d-34.52947810241279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6ad5df27b3b%3A0xb31979a45300fad2!2sVicente%20L%C3%B3pez%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1623109475774!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy">
-		</iframe>
+		<iframe class="border border-secondary rounded" id="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52591.21050082419!2d-58.54168345271266!3d-34.52947810241279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6ad5df27b3b%3A0xb31979a45300fad2!2sVicente%20L%C3%B3pez%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1623109475774!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy"></iframe>
 	</div>
 	<footer>
 		<div class="d-flex footer__location">
@@ -106,8 +103,16 @@
 		<img class="footer__MediosPago" src="media/mp.png" alt="Mercado Pago">
 		<h5>Todos los derechos reservados <span class="rojoCustom">© 2021</span></h5>
 	</footer>
+	<script src="https://kit.fontawesome.com/026c5ee3ed.js" crossorigin="anonymous"></script>
 	<script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/formspree.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#nav-icon').click(function(){
+				$(this).toggleClass('open');
+			});
+		});
+	</script>
 </body>
 </html>

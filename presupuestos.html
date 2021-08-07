@@ -6,25 +6,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Detalle de precios de los servicios y la forma de entrega de los mismos">
 	<link rel="icon" type="image/png" href="media/fav.png">
-	<script src="https://kit.fontawesome.com/026c5ee3ed.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 </head>
 <body>
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark fixed-top flex-row">
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top flex-row" id="navbar">
 			<a class="navbar-brand" href="index.html"><img class="navbar__logo mr-lg-3" src="media/logo3.png" title="logo" alt="logo"></a>
-			<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"></span>
-			</button>
+			<button id="nav-icon" class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span></span>
+			  	<span></span>
+			  	<span></span>
+		  	</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-			  <div id="links" class="navbar-nav align-items-center mt-2 my-2 mx-auto w-100">
-				<a class="nav-link" href="index.html">INICIO <span class="sr-only">(current)</span></a>
-				<a class="nav-link" href="index.html#fotos">FOTOS</a>
-				<a class="nav-link" href="index.html#video">VIDEO</a>
-				<a class="nav-link active" href="presupuestos.html">PRESUPUESTOS</a>
-				<a class="nav-link" href="contacto.html">CONTACTO</a>
-			  </div>
+				<div id="links" class="navbar-nav align-items-center mt-2 my-2 mx-auto w-100">
+					<a class="nav-link" href="index.html">INICIO <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="index.html#fotos">FOTOS</a>
+					<a class="nav-link" href="index.html#video">VIDEO</a>
+					<a class="nav-link active" href="presupuestos.html">PRESUPUESTOS</a>
+					<a class="nav-link" href="contacto.html">CONTACTO</a>
+				</div>
 			</div>
 		</nav>
 	</header><!--End Header-->	
@@ -35,74 +36,74 @@
 		<div class="container">
 			<h3 class="flexPresu__titulo"><span class="rojoCustom">P</span>recio por impresión de fotografías (por unidad)</h3>
 			<table class="table table-striped"><!--Tabla precios-->
-			  <thead class="thead-dark">
-			    <tr>
-			      <th scope="col"></th>
-			      <th scope="col">1</th>
-			      <th scope="col">2 a 20</th>
-			      <th scope="col">21 a 50</th>
-			      <th scope="col">50+</th>
-			    </tr>
-			  </thead>
-			  <tbody>
-			    <tr>
-			      <th scope="row">10x15</th>
-			      <td>$84</td>
-			      <td>$52</td>
-			      <td>$32</td>
-			      <td>$25</td>
-			    </tr>
-			    <tr>
-			      <th scope="row">13x18</th>
-			      <td>$105</td>
-			      <td>$73</td>
-			      <td>$52</td>
-			      <td>$33</td>
-			    </tr>
-			    <tr>
-			      <th scope="row">15x21</th>
-			      <td>$126</td>
-			      <td>$94</td>
-			      <td>$73</td>
-			      <td>$52</td>
-			    </tr>
-			     <tr>
-			      <th scope="row">20x30</th>
-			      <td>$220</td>
-			      <td>$178</td>
-			      <td>$157</td>
-			      <td>$126</td>
-			    </tr>
-			  </tbody>
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col"></th>
+						<th scope="col">1</th>
+						<th scope="col">2 a 20</th>
+						<th scope="col">21 a 50</th>
+						<th scope="col">50+</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">10x15</th>
+						<td>$84</td>
+						<td>$52</td>
+						<td>$32</td>
+						<td>$25</td>
+					</tr>
+					<tr>
+						<th scope="row">13x18</th>
+						<td>$105</td>
+						<td>$73</td>
+						<td>$52</td>
+						<td>$33</td>
+					</tr>
+					<tr>
+						<th scope="row">15x21</th>
+						<td>$126</td>
+						<td>$94</td>
+						<td>$73</td>
+						<td>$52</td>
+					</tr>
+					<tr>
+						<th scope="row">20x30</th>
+						<td>$220</td>
+						<td>$178</td>
+						<td>$157</td>
+						<td>$126</td>
+					</tr>
+				</tbody>
 			</table><!--End tabla precios-->
 			<table class="table"><!--Tabla entrega-->
-			  <thead class="thead-dark">
-			    <tr>
-			      <th scope="col">Fotos</th>
-			      <th scope="col">Forma de entrega</th>
-			    </tr>
-			  </thead>
-			  <tbody>
-			    <tr>
-			      <th scope="row">1 a 50</th>
-			      <td>
-			      	<ol>
-						<li>Pendrive con fotos en digital HD</li>
-						<li>Álbum fotos tapa blanda diseños varios</li>
-					</ol>
-				   </td>
-			    </tr>
-			    <tr>
-			      <th scope="row">50+</th>
-			      <td>
-			      	<ol>
-						<li>Pendrive con fotos en digital HD</li>
-						<li>Álbum fotos tapa dura personalizado</li>
-						<li>Portarretrato diseño a elección</li>
-					</ol>
-			      </td>
-			    </tr>
-			  </tbody>
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">Fotos</th>
+						<th scope="col">Forma de entrega</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">1 a 50</th>
+						<td>
+							<ol>
+								<li>Pendrive con fotos en digital HD</li>
+								<li>Álbum fotos tapa blanda diseños varios</li>
+							</ol>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">50+</th>
+						<td>
+							<ol>
+								<li>Pendrive con fotos en digital HD</li>
+								<li>Álbum fotos tapa dura personalizado</li>
+								<li>Portarretrato diseño a elección</li>
+							</ol>
+						</td>
+					</tr>
+				</tbody>
 			</table>
 		</div><!--Tabla entrega end-->
 	</div>
@@ -120,7 +121,15 @@
 		<img class="footer__MediosPago" src="media/mp.png" alt="Mercado Pago">
 		<h5>Todos los derechos reservados <span class="rojoCustom">© 2021</span></h5>
 	</footer>
+	<script src="https://kit.fontawesome.com/026c5ee3ed.js" crossorigin="anonymous"></script>
 	<script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#nav-icon').click(function(){
+				$(this).toggleClass('open');
+			});
+		});
+	</script>
 </body>
 </html>

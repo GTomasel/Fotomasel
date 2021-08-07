@@ -20,19 +20,19 @@
 	<header id="header">	
 		<nav class="navbar navbar-expand-lg navbar-dark fixed-top flex-row" id="navbar">
 			<a class="navbar-brand" href="index.html"><img class="navbar__logo mr-lg-3" src="media/logo3.png" title="logo" alt="logo"></a>
-			<button id="nav-icon4" class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<button id="nav-icon" class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 			  	<span></span>
 				<span></span>
 				<span></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-			  <div id="links" class="navbar-nav align-items-center mt-2 my-2 mx-auto w-100">
-				<a class="nav-link js-scroll-trigger active" href="#header">INICIO <span class="sr-only">(current)</span></a>
-				<a class="nav-link js-scroll-trigger" href="#fotos">FOTOS</a>
-				<a class="nav-link js-scroll-trigger" href="#video">VIDEO</a>
-				<a class="nav-link" href="presupuestos.html">PRESUPUESTOS</a>
-				<a class="nav-link" href="contacto.html">CONTACTO</a>
-			  </div>
+				<div id="links" class="navbar-nav align-items-center mt-2 my-2 mx-auto w-100">
+					<a class="nav-link js-scroll-trigger active" href="#header">INICIO <span class="sr-only">(current)</span></a>
+					<a class="nav-link js-scroll-trigger" href="#fotos">FOTOS</a>
+					<a class="nav-link js-scroll-trigger" href="#video">VIDEO</a>
+					<a class="nav-link" href="presupuestos.html">PRESUPUESTOS</a>
+					<a class="nav-link" href="contacto.html">CONTACTO</a>
+				</div>
 			</div>
 		</nav>
 	</header><!--End Header-->
@@ -41,324 +41,324 @@
 	</div>
 	<div class="position-relative"><!--Imagen a modo presentacion-->
 		<picture>
-			<source style="z-index: 100;" media="(min-width:992px)" class="main__fondo position-absolute rellax d-block w-100" srcset="media/fondo_d.png" data-rellax-speed="-2" alt="Imagen de fondo principal">
+			<source style="z-index: 100;" srcset="media/fondo_d.png" class="main__fondo position-absolute rellax d-block w-100" data-rellax-speed="-2" alt="Imagen de fondo principal" media="(min-width:992px)">
 			<img style="z-index: 100;" src="media/fondo_m.png" class="main__fondo position-absolute rellax d-block w-100" data-rellax-speed="-2" alt="Imagen de fondo principal">
 		</picture>
 		<div id="banner-images"> </div>
 		<script> 
-		var images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg', '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg', '20.jpg', '21.jpg', '22.jpg', '23.jpg', '24.jpg', '25.jpg', '26.jpg', '27.jpg', '28.jpg', '29.jpg', '30.jpg', '31.jpg'];	
-		$('<img style="z-index: 50;" class="fade-in main__fondo-contain rellax d-block" data-rellax-speed="-4" src="media/fondos/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#banner-images');
+			var images = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg', '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg', '20.jpg', '21.jpg', '22.jpg', '23.jpg', '24.jpg', '25.jpg', '26.jpg', '27.jpg', '28.jpg', '29.jpg', '30.jpg', '31.jpg'];	
+			$('<img style="z-index: 50;" class="fade-in main__fondo-contain rellax d-block" data-rellax-speed="-4" src="media/fondos/' + images[Math.floor(Math.random() * images.length)] + '">').appendTo('#banner-images');
 		</script>
 	</div>
 	<div class="estiloParrafos estiloParrafos-opaco text-center rellax" data-rellax-speed="-1">
 		<p class="estiloTitulos"><span class="rojoCustom">S</span>ervicios de fotografía</p>
 		<h1 id="fotos">
-			Acá pueden ver una selección de imágenes de mis trabajos, incluyendo bautismos, retratos, cumpleaños, fiestas y bandas en vivo para las cuales también hago grabaciones de sus shows.
+			Aquí pueden ver una selección de imágenes de mis trabajos, incluyendo bautismos, retratos, cumpleaños, fiestas y bandas en vivo para las cuales también hago grabaciones de sus shows.
 		</h1>		
 	</div>	
 	<div ><!--Slideshows, texto y bio-->
 		<div class="flexSlideshow d-flex overflow-hidden"><!--Slideshows-->
 			<div id="carouselBautismos" class="carousel slide carousel-fade flexSlideshow--customWidth" data-ride="carousel" data-aos="fade-up-right"><!--Carrousel_1-->
-			  <div class="carousel-inner border border-secondary rounded">
-			    <div class="carousel-item active">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bautismo_H1.jpg">
-					  <img src="media/fotos/Bautismo_V1.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Bautismos</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bautismo_H2.jpg">
-					  <img src="media/fotos/Bautismo_V2.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Bautismos</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bautismo_H3.jpg">
-					  <img src="media/fotos/Bautismo_V3.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Bautismos</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bautismo_H4.jpg">
-					  <img src="media/fotos/Bautismo_V4.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Bautismos</h5>
-			      	</div>
-			    </div>
-			  </div>
-			  <a class="carousel-control-prev" href="#carouselBautismos" role="button" data-slide="prev">
-			    <span class="fas fa-chevron-circle-left fa-lg" aria-hidden="true"></span>
-			    <span class="sr-only">Anterior</span>
-			  </a>
-			  <a class="carousel-control-next" href="#carouselBautismos" role="button" data-slide="next">
-			    <span class="fas fa-chevron-circle-right fa-lg" aria-hidden="true"></span>
-			    <span class="sr-only">Siguiente</span>
-			  </a>
+				<div class="carousel-inner border border-secondary rounded">
+					<div class="carousel-item active">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bautismo_H1.jpg">
+							<img src="media/fotos/Bautismo_V1.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Bautismos</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bautismo_H2.jpg">
+							<img src="media/fotos/Bautismo_V2.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Bautismos</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bautismo_H3.jpg">
+							<img src="media/fotos/Bautismo_V3.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Bautismos</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bautismo_H4.jpg">
+							<img src="media/fotos/Bautismo_V4.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Bautismos</h5>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselBautismos" role="button" data-slide="prev">
+					<span class="fas fa-chevron-circle-left fa-lg" aria-hidden="true"></span>
+					<span class="sr-only">Anterior</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselBautismos" role="button" data-slide="next">
+					<span class="fas fa-chevron-circle-right fa-lg" aria-hidden="true"></span>
+					<span class="sr-only">Siguiente</span>
+				</a>
 			</div>
 			<div id="carouselBooks" class="carousel slide carousel-fade flexSlideshow--customWidth" data-ride="carousel" data-aos="fade-up-left"><!--Carrousel_2-->
-			  <div class="carousel-inner border border-secondary rounded">
-			    <div class="carousel-item active">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H1.jpg">
-					  <img src="media/fotos/Book_V1.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Books</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H2.jpg">
-					  <img src="media/fotos/Book_V2.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Books</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H3.jpg">
-					  <img src="media/fotos/Book_V3.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Books</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H4.jpg">
-					  <img src="media/fotos/Book_V4.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Books</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H5.jpg">
-					  <img src="media/fotos/Book_V5.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Books</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H6.jpg">
-					  <img src="media/fotos/Book_V6.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Books</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H7.jpg">
-					  <img src="media/fotos/Book_V7.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Books</h5>
-			      	</div>
-			    </div>
-			  </div>
-			  <a class="carousel-control-prev" href="#carouselBooks" role="button" data-slide="prev">
-			    <span class="fas fa-chevron-circle-left fa-lg" aria-hidden="true"></span>
-			    <span class="sr-only">Anterior</span>
-			  </a>
-			  <a class="carousel-control-next" href="#carouselBooks" role="button" data-slide="next">
-			    <span class="fas fa-chevron-circle-right fa-lg" aria-hidden="true"></span>
-			    <span class="sr-only">Siguiente</span>
-			  </a>
+				<div class="carousel-inner border border-secondary rounded">
+					<div class="carousel-item active">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H1.jpg">
+							<img src="media/fotos/Book_V1.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Books</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H2.jpg">
+							<img src="media/fotos/Book_V2.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Books</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H3.jpg">
+							<img src="media/fotos/Book_V3.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Books</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H4.jpg">
+							<img src="media/fotos/Book_V4.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Books</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H5.jpg">
+							<img src="media/fotos/Book_V5.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Books</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H6.jpg">
+							<img src="media/fotos/Book_V6.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Books</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Book_H7.jpg">
+							<img src="media/fotos/Book_V7.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Books</h5>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselBooks" role="button" data-slide="prev">
+					<span class="fas fa-chevron-circle-left fa-lg" aria-hidden="true"></span>
+					<span class="sr-only">Anterior</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselBooks" role="button" data-slide="next">
+					<span class="fas fa-chevron-circle-right fa-lg" aria-hidden="true"></span>
+					<span class="sr-only">Siguiente</span>
+				</a>
 			</div>
 			<div id="carouselFiestas" class="carousel slide carousel-fade flexSlideshow--customWidth" data-ride="carousel" data-aos="fade-up-right"><!--Carrousel_3-->
-			  <div class="carousel-inner border border-secondary rounded">
-			    <div class="carousel-item active">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/15_H1.jpg">
-					  <img src="media/fotos/15_V1.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Fiestas de 15</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/15_H2.jpg">
-					  <img src="media/fotos/15_V2.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Fiestas de 15</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/15_H3.jpg">
-					  <img src="media/fotos/15_V3.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Fiestas de 15</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/15_H4.jpg">
-					  <img src="media/fotos/15_V4.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Fiestas de 15</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/15_H5.jpg">
-					  <img src="media/fotos/15_V5.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Fiestas de 15</h5>
-			      	</div>
-			    </div>
-			  </div>
-			  <a class="carousel-control-prev" href="#carouselFiestas" role="button" data-slide="prev">
-			    <span class="fas fa-chevron-circle-left fa-lg" aria-hidden="true"></span>
-			    <span class="sr-only">Anterior</span>
-			  </a>
-			  <a class="carousel-control-next" href="#carouselFiestas" role="button" data-slide="next">
-			    <span class="fas fa-chevron-circle-right fa-lg" aria-hidden="true"></span>
-			    <span class="sr-only">Siguiente</span>
-			  </a>
+				<div class="carousel-inner border border-secondary rounded">
+					<div class="carousel-item active">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/15_H1.jpg">
+							<img src="media/fotos/15_V1.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Fiestas de 15</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/15_H2.jpg">
+							<img src="media/fotos/15_V2.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Fiestas de 15</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/15_H3.jpg">
+							<img src="media/fotos/15_V3.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Fiestas de 15</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/15_H4.jpg">
+							<img src="media/fotos/15_V4.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Fiestas de 15</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/15_H5.jpg">
+							<img src="media/fotos/15_V5.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Fiestas de 15</h5>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselFiestas" role="button" data-slide="prev">
+					<span class="fas fa-chevron-circle-left fa-lg" aria-hidden="true"></span>
+					<span class="sr-only">Anterior</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselFiestas" role="button" data-slide="next">
+					<span class="fas fa-chevron-circle-right fa-lg" aria-hidden="true"></span>
+					<span class="sr-only">Siguiente</span>
+				</a>
 			</div>
 			<div id="carouselBandas" class="carousel slide carousel-fade flexSlideshow--customWidth" data-ride="carousel" data-aos="fade-up-left"><!--Carrousel_4-->
-			  <div class="carousel-inner border border-secondary rounded">
-			    <div class="carousel-item active">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bandas_H1.jpg">
-					  <img src="media/fotos/Bandas_V1.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Bandas en Vivo</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bandas_H2.jpg">
-					  <img src="media/fotos/Bandas_V2.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Bandas en Vivo</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bandas_H3.jpg">
-					  <img src="media/fotos/Bandas_V3.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Bandas en Vivo</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bandas_H4.jpg">
-					  <img src="media/fotos/Bandas_V4.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Bandas en Vivo</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bandas_H5.jpg">
-					  <img src="media/fotos/Bandas_V5.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Bandas en Vivo</h5>
-			      	</div>
-			    </div>
-			  </div>
-			  <a class="carousel-control-prev" href="#carouselBandas" role="button" data-slide="prev">
-			    <span class="fas fa-chevron-circle-left fa-lg" aria-hidden="true"></span>
-			    <span class="sr-only">Anterior</span>
-			  </a>
-			  <a class="carousel-control-next" href="#carouselBandas" role="button" data-slide="next">
-			    <span class="fas fa-chevron-circle-right fa-lg" aria-hidden="true"></span>
-			    <span class="sr-only">Siguiente</span>
-			  </a>
+				<div class="carousel-inner border border-secondary rounded">
+					<div class="carousel-item active">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bandas_H1.jpg">
+							<img src="media/fotos/Bandas_V1.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Bandas en Vivo</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bandas_H2.jpg">
+							<img src="media/fotos/Bandas_V2.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Bandas en Vivo</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bandas_H3.jpg">
+							<img src="media/fotos/Bandas_V3.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Bandas en Vivo</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bandas_H4.jpg">
+							<img src="media/fotos/Bandas_V4.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Bandas en Vivo</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Bandas_H5.jpg">
+							<img src="media/fotos/Bandas_V5.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Bandas en Vivo</h5>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselBandas" role="button" data-slide="prev">
+					<span class="fas fa-chevron-circle-left fa-lg" aria-hidden="true"></span>
+					<span class="sr-only">Anterior</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselBandas" role="button" data-slide="next">
+					<span class="fas fa-chevron-circle-right fa-lg" aria-hidden="true"></span>
+					<span class="sr-only">Siguiente</span>
+				</a>
 			</div>
 			<div id="carouselEventos" class="carousel slide carousel-fade flexSlideshow--customWidth" data-ride="carousel" data-aos="fade-up"><!--Carrousel_5-->
-			  <div class="carousel-inner border border-secondary rounded">
-			    <div class="carousel-item active">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H1.jpg">
-					  <img src="media/fotos/Eventos_V1.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Eventos</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H2.jpg">
-					  <img src="media/fotos/Eventos_V2.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Eventos</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H3.jpg">
-					  <img src="media/fotos/Eventos_V3.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Eventos</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H4.jpg">
-					  <img src="media/fotos/Eventos_V4.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Eventos</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H5.jpg">
-					  <img src="media/fotos/Eventos_V5.jpg" class="d-block w-100" alt="fondo">
-					</picture> 
-			     	<div class="carousel-caption">
-			        	<h5>Eventos</h5>
-			      	</div>
-			    </div>
-			    <div class="carousel-item">
-			    	<picture>
-					  <source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H6.jpg">
-					  <img src="media/fotos/Eventos_V6.jpg" class="d-block w-100" alt="fondo"ture> 
-			     	<div class="carousel-caption">
-			        	<h5>Eventos</h5>
-			      	</div>
-			    </div>
-			  </div>
-			  <a class="carousel-control-prev" href="#carouselEventos" role="button" data-slide="prev">
-			    <span class="fas fa-chevron-circle-left fa-lg" aria-hidden="true"></span>
-			    <span class="sr-only">Anterior</span>
-			  </a>
-			  <a class="carousel-control-next" href="#carouselEventos" role="button" data-slide="next">
-			    <span class="fas fa-chevron-circle-right fa-lg" aria-hidden="true"></span>
-			    <span class="sr-only">Siguiente</span>
-			  </a>
+				<div class="carousel-inner border border-secondary rounded">
+					<div class="carousel-item active">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H1.jpg">
+							<img src="media/fotos/Eventos_V1.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Eventos</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H2.jpg">
+							<img src="media/fotos/Eventos_V2.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Eventos</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H3.jpg">
+							<img src="media/fotos/Eventos_V3.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Eventos</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H4.jpg">
+							<img src="media/fotos/Eventos_V4.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Eventos</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H5.jpg">
+							<img src="media/fotos/Eventos_V5.jpg" class="d-block w-100" alt="fondo">
+						</picture> 
+						<div class="carousel-caption">
+							<h5>Eventos</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<picture>
+							<source media="(min-width:600px)" class="d-block w-100" srcset="media/fotos/Eventos_H6.jpg">
+							<img src="media/fotos/Eventos_V6.jpg" class="d-block w-100" alt="fondo"ture> 
+						<div class="carousel-caption">
+							<h5>Eventos</h5>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselEventos" role="button" data-slide="prev">
+					<span class="fas fa-chevron-circle-left fa-lg" aria-hidden="true"></span>
+					<span class="sr-only">Anterior</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselEventos" role="button" data-slide="next">
+					<span class="fas fa-chevron-circle-right fa-lg" aria-hidden="true"></span>
+					<span class="sr-only">Siguiente</span>
+				</a>
 			</div>
 		</div>
 		<div class="text-center estiloParrafos estiloParrafos-margen rellax" data-rellax-speed="-1"><!--Pequeña biografía-->
@@ -418,6 +418,11 @@
 	<script>
 		AOS.init();
 		var rellax = new Rellax('.rellax');
+		$(document).ready(function(){
+			$('#nav-icon').click(function(){
+				$(this).toggleClass('open');
+			});
+		});
   </script>
 </body>
 </html>
