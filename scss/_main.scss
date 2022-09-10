@@ -319,7 +319,7 @@ footer{
   	justify-content: space-around;
   	margin-top: 100px;
 	.flexPresu__foto img{
-		height: 80vw;
+		width: 100%;
 		margin-bottom: 5vw;
 	}
 	.flexPresu__titulo{
@@ -526,12 +526,13 @@ footer{
 		}
 	}	 	
 	.flexPresu{
-		flex-flow: row;
+		flex-flow: column-reverse;
 		.flexPresu__foto img{
-			height: 35vw;
 			margin-bottom: .5vw;
-			margin-left: 3rem;
 		}
 	}	
+	.table{
+		width: 50%;
+	}
 }
 
